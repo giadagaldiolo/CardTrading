@@ -1,0 +1,45 @@
+<html>
+    <header>
+        <img src="newLogo.png" width="450" height="200" alt="logo">
+        <h1> Card Sale Form </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/cardSaleDetails.html">Card sale details</a></li>
+        </ul>
+    </nav>
+    <body>
+        <form>
+            <label for="cname">Card name:</label><br>
+            <input type="text" id="cname" name="cname"><br>
+
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author"><br>
+
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date"><br>
+
+            <p> Card condition </p>
+            <input type="radio" id="mint" name="card_condition" value="mint">
+            <label for="mint">mint</label><br>
+            <input type="radio" id="near-mint" name="card_condition" value="near-mint">
+            <label for="near-mint">near-mint</label><br>
+            <input type="radio" id="played" name="card_condition" value="played">
+            <label for="played">played</label><br><br>
+
+            <label for="descrizione">Descriptive text:</label><br>
+            <textarea name="descrizione" rows="5" cols="20">write something</textarea><br><br>
+
+            <label for="file">Select the card image:</label><br>
+            <input type ="file" id="file" name="file"> <br><br>
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <aside>
+        <h2>sidebar</h2>
+    </aside>
+    <footer> Copyleft CC-by 2025 by Giada </footer>
+</html>
