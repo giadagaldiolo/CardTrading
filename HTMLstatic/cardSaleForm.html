@@ -1,15 +1,22 @@
 <html>
-    <header>
-        <img src="newLogo.png" width="450" height="200" alt="logo">
-        <h1> Card Sale Form </h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/cardSaleDetails.html">Card sale details</a></li>
-        </ul>
-    </nav>
+    <head>
+        <title>SUPSI Card Online Shop - Card Sale Form</title>
+    </head>
     <body>
+        <header>
+            <img src="newLogo.png" width="450" height="200" alt="logo">
+            <h1> Card Sale Form </h1>
+        </header>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pikachuDetails.html">Pikachu details</a></li>
+                <li><a href="/bulbasaurDetails.html">Bulbasaur details</a></li>
+                <li><a href="/charmanderDetails.html">Charmander details</a></li>
+            </ul>
+        </nav>
+        <hr>
         <form>
             <label for="cname">Card name:</label><br>
             <input type="text" id="cname" name="cname"><br>
@@ -29,7 +36,7 @@
             <label for="played">played</label><br><br>
 
             <label for="descrizione">Descriptive text:</label><br>
-            <textarea name="descrizione" rows="5" cols="20">write something</textarea><br><br>
+            <textarea name="descrizione" id="descrizione" rows="5" cols="20">write something</textarea><br><br>
 
             <label for="file">Select the card image:</label><br>
             <input type ="file" id="file" name="file"> <br><br>
@@ -37,9 +44,11 @@
 
             <input type="submit" value="Submit">
         </form>
+        <aside>
+            <h2>sidebar</h2>
+        </aside>
+        <hr>
+        <footer> Copyleft CC-by 2025 by Giada </footer>
+        <hr>
     </body>
-    <aside>
-        <h2>sidebar</h2>
-    </aside>
-    <footer> Copyleft CC-by 2025 by Giada </footer>
 </html>
