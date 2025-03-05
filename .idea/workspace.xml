@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/cardSaleDetails.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,7 @@
       <updated>1741083017214</updated>
       <workItem from="1741083018289" duration="5427000" />
       <workItem from="1741169495890" duration="105000" />
-      <workItem from="1741190876128" duration="2450000" />
+      <workItem from="1741190876128" duration="2855000" />
     </task>
     <servers />
   </component>
