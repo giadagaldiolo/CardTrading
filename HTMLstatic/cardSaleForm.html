@@ -2,54 +2,67 @@
 <html lang="en">
     <head>
         <title>SUPSI Card Online Shop - Card Sale Form</title>
+        <meta name="author" content="Giada Galdiolo">
+        <meta name="date" content="2025-03-11" scheme="YYYY-MM-DD">
+        <meta name="description" content="SUPSI card online shop">
+        <meta charset="UTF-8">
     </head>
     <body>
         <header>
             <img src="newLogo.png" width="450" height="200" alt="logo">
             <h1> Card Sale Form </h1>
         </header>
-        <hr>
         <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pikachuDetails.html">Pikachu details</a></li>
-                <li><a href="/bulbasaurDetails.html">Bulbasaur details</a></li>
-                <li><a href="/charmanderDetails.html">Charmander details</a></li>
-            </ul>
+            <hr> My navbar |
+            <a href="/index.html">Home </a> |
+            <a> Card sale form</a> |
+            <a href="/pikachuDetails.html">Pikachu details</a> |
+            <a href="/bulbasaurDetails.html">Bulbasaur details</a> |
+            <a href="/charmanderDetails.html">Charmander details</a> |
+            <hr>
         </nav>
-        <hr>
         <form>
-            <label for="cname">Card name:</label><br>
-            <input type="text" id="cname" name="cname"><br>
-
-            <label for="author">Author:</label><br>
-            <input type="text" id="author" name="author"><br>
-
-            <label for="date">Date:</label><br>
-            <input type="date" id="date" name="date"><br>
-
-            <p> Card condition </p>
-            <input type="radio" id="mint" name="card_condition" value="mint">
-            <label for="mint">mint</label><br>
-            <input type="radio" id="near-mint" name="card_condition" value="near-mint">
-            <label for="near-mint">near-mint</label><br>
-            <input type="radio" id="played" name="card_condition" value="played">
-            <label for="played">played</label><br><br>
-
-            <label for="descrizione">Descriptive text:</label><br>
-            <textarea name="descrizione" id="descrizione" rows="5" cols="20">write something</textarea><br><br>
-
-            <label for="file">Select the card image:</label><br>
-            <input type ="file" id="file" name="file"> <br><br>
-
-
+            <fieldset>
+                <legend>New card</legend>
+                <div>
+                    <label for="cname">Card name:</label><br>
+                    <input type="text" id="cname" name="cname">
+                </div>
+                <div>
+                    <label for="author">Author:</label><br>
+                    <input type="text" id="author" name="author">
+                </div>
+                <div>
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div>
+                    <label for="condition">Condition</label>
+                    <select id="condition" name="condition">
+                        <option value="">Select condition</option>
+                        <option value="mint">mint</option>
+                        <option value="near-mint">near-mint</option>
+                        <option value="played">played</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="descrizione">Descriptive text:</label>
+                    <textarea name="descrizione" id="descrizione" rows="2" cols="20">write something</textarea>
+                </div>
+                <div>
+                    <label for="file">Select the card image:</label>
+                    <input type ="file" id="file" name="file">
+                </div>
+            </fieldset>
             <input type="submit" value="Submit">
         </form>
         <aside>
             <h2>sidebar</h2>
         </aside>
-        <hr>
-        <footer> Copyleft CC-by 2025 by Giada </footer>
-        <hr>
+        <footer>
+            <hr>
+            <small> Copyleft CC-by 2025 by Giada </small>
+            <hr>
+        </footer>
     </body>
 </html>
