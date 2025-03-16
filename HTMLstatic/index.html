@@ -6,38 +6,47 @@
         <meta name="date" content="2025-03-11" scheme="YYYY-MM-DD">
         <meta name="description" content="SUPSI card online shop">
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="CSS/common.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/indexStyle.css">
     </head>
     <body>
         <header>
-            <img src="newLogo.png" width="450" height="200" alt="logo">
-            <h1> SUPSI card online shop </h1>
+            <div style="display: flex; align-items: center">
+                <img src="images/newLogo.png" width="450" height="200" alt="logo">
+                <h1 style="margin-left: 20px;"> SUPSI Card online shop </h1>
+            </div>
         </header>
-        <nav>
-            <hr> My navbar |
+
+        <nav class="navbar">
+            <hr>
             <a> Home </a> |
             <a href="/cardSaleForm.html">Card sale form</a> |
             <a href="/pikachuDetails.html">Pikachu details</a> |
             <a href="/bulbasaurDetails.html">Bulbasaur details</a> |
-            <a href="/charmanderDetails.html">Charmander details</a> |
+            <a href="/charmanderDetails.html">Charmander details</a>
             <hr>
         </nav>
-        <main>
-            <section>
-                <h2> Card announcements </h2>
+        <div class="container-main">
+            <main>
+                <section>
+                    <h2> Card announcements </h2>
+                    <ul>
+                        <li class="announcement"><a href="/pikachuDetails.html">Pikachu</a>, <time datetime="2025-03-04">2025-03-04</time>, ok, "description"</li>
+                        <li class="announcement"><a href="/bulbasaurDetails.html">Bulbasaur</a>, <time datetime="2025-03-04">2025-03-04</time>, ok, "description"</li>
+                        <li class="announcement"><a href="/charmanderDetails.html">Charmander</a>, <time datetime="2025-03-04">2025-03-04</time>, ok, "description"</li>
+                    </ul>
+                </section>
+            </main>
+            <aside>
+                <h2>News</h2>
                 <ul>
-                    <li> <a href="/pikachuDetails.html">Pikachu</a>, <time datetime="2025-03-04">2025-03-04</time>, ok, "description"</li>
-                    <li> <a href="/bulbasaurDetails.html">Bulbasaur</a>, <time datetime="2025-03-04">2025-03-04</time>, ok, "description"</li>
-                    <li> <a href="/charmanderDetails.html">Charmander</a>, <time datetime="2025-03-04">2025-03-04</time>, ok, "description"</li>
+                    <li>#PP2 | New version of the platform: CSS added</li>
+                    <li>#PP1 | First version online!</li>
                 </ul>
-            </section>
-        </main>
-        <aside>
-            <h2>sidebar</h2>
-        </aside>
+            </aside>
+        </div>
         <footer>
-            <hr>
             <small> Copyleft CC-by 2025 by Giada </small>
-            <hr>
         </footer>
     </body>
 </html>

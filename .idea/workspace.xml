@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/cardSaleStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/detailsStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/indexStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/newLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/images/newLogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +38,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Documents/GitHub/galdiolo&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Documents/GitHub/educational-project&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -42,6 +47,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\giada\Documents\GitHub\galdiolo\HTMLstatic\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -61,7 +71,10 @@
       <workItem from="1741083018289" duration="5427000" />
       <workItem from="1741169495890" duration="105000" />
       <workItem from="1741190876128" duration="2855000" />
-      <workItem from="1741685570534" duration="2976000" />
+      <workItem from="1741685570534" duration="5002000" />
+      <workItem from="1741701228663" duration="7000" />
+      <workItem from="1741702779795" duration="17000" />
+      <workItem from="1742134934654" duration="8955000" />
     </task>
     <servers />
   </component>
