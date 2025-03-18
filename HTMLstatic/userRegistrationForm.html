@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SUPSI Card Registration Form</title>
+    <meta name="author" content="Giada Galdiolo">
+    <meta name="date" content="2025-03-11" scheme="YYYY-MM-DD">
+    <meta name="description" content="SUPSI card registration form">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/common.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/RegistrationFormStyle.css" />
+</head>
+<body>
+<header>
+    <div style="display: flex; align-items: center">
+        <img src="images/newLogo.png" width="450" height="200" alt="logo">
+        <h1 style="margin-left: 20px;"> SUPSI Card online shop </h1>
+    </div>
+</header>
+
+<nav class="navbar">
+    <hr>
+    <a href="/index.html">Home </a> |
+    <a href="/cardSaleForm.html">Card sale form</a> |
+    <a href="/pikachuDetails.html">Pikachu details</a> |
+    <a href="/bulbasaurDetails.html">Bulbasaur details</a> |
+    <a href="/charmanderDetails.html">Charmander details</a> |
+    <a>Registration Form</a> |
+    <hr>
+</nav>
+
+<form id="registration-form">
+    <fieldset>
+        <legend>User Registration</legend>
+        <div>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required><br><br>
+        </div>
+
+        <div>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+        </div>
+
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required><br><br>
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </div>
+
+        <div>
+            <label for="password-confirm">Confirm Password</label>
+            <input type="password" id="password-confirm" name="password-confirm" required><br><br>
+        </div>
+        <div id="submit-container"></div>
+    </fieldset>
+
+</form>
+
+<script src="scripts/validation.js">
+</script>
+</body>
+<footer>
+    <small> Copyleft CC-by 2025 by Giada </small>
+</footer>
+</html>

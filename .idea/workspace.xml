@@ -5,22 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/cardSaleStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/detailsStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/indexStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/CSS/RegistrationFormStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/scripts/validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/userRegistrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/newLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/images/newLogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,20 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Documents/GitHub/educational-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/giada/Documents/GitHub/educational-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\giada\Documents\GitHub\galdiolo\HTMLstatic\images" />
@@ -74,7 +82,11 @@
       <workItem from="1741685570534" duration="5002000" />
       <workItem from="1741701228663" duration="7000" />
       <workItem from="1741702779795" duration="17000" />
-      <workItem from="1742134934654" duration="8955000" />
+      <workItem from="1742134934654" duration="9631000" />
+      <workItem from="1742157766931" duration="6000" />
+      <workItem from="1742195599256" duration="46000" />
+      <workItem from="1742220484019" duration="740000" />
+      <workItem from="1742290718687" duration="3751000" />
     </task>
     <servers />
   </component>
