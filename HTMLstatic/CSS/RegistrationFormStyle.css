@@ -1,10 +1,18 @@
+* {
+    box-sizing: border-box; /* Evita problemi di dimensioni */
+}
+
+
+
 form {
+    grid-column: span 12;
     background-color: white;
-    padding: 20px;
+    padding: 20px 20px 50px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%;
-    margin: 20px 20px 60px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto auto auto;
 }
 
 fieldset {
@@ -12,6 +20,7 @@ fieldset {
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 
 legend {
@@ -35,7 +44,8 @@ input, select, textarea {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+
+#submit-button {
     background-color: lightpink;
     color: white;
     border: none;
@@ -45,6 +55,6 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
-input[type="submit"]:hover {
+#submit-button:hover {
     background-color: darkgray;
 }
