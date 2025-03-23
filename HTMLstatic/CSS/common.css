@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container-main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -31,10 +37,9 @@ header {
     grid-column: span 12;
     background-color: #ffb6c1; /* Rosa più scuro */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    text-align: start;
+    padding: 0 10px;
 }
 
 .navbar a {
@@ -53,7 +58,7 @@ header {
 footer {
     background-color: #ffb6c1;
     text-align: center;
-    padding: 0;
+    padding: 2px;
     bottom: 0;
     left: 0;
     width: 100%;
