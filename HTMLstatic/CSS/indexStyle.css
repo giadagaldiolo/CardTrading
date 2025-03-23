@@ -1,13 +1,9 @@
-.container-main {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3px;
-    padding: 0 20px;
-}
+
 
 main {
+    grid-column: span 9;
     flex: 2; /* Occupa due terzi della larghezza disponibile */
-    margin-right: 20px;
+    padding: 10px 10px 10px 30px;
 }
 
 main h2 {
@@ -35,6 +31,7 @@ main ul li:hover {
 
 
 aside {
+    grid-column: span 3;
     flex: 1; /* Stesso rosa della navbar */
     padding: 25px;
     border-left: 2px solid #ddd;

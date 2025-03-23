@@ -1,20 +1,28 @@
 /* Styling specific to the card details page */
+
+
 main {
+    grid-column: span 8;
+    flex: 2;
     max-width: 900px;
-    margin: 20px 20px 80px;
+    padding: 10px 10px 10px 30px;
 }
 
-fieldset {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
+article {
+    display: flex;
+    padding: 10px 10px 10px 30px;
     margin-top: 20px;
     border-radius: 8px;
 }
 
+article img {
+    margin-left: auto;
+}
+
 h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: #444;
+    margin: 20px 0;
+    font-size: 24px;
 }
 
 p {
@@ -22,15 +30,36 @@ p {
     line-height: 1.6;
 }
 
-img {
-    margin-top: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-}
-
 time {
     font-style: italic;
     color: #666;
+}
+
+aside {
+    grid-column: span 3;
+    flex: 1; /* Stesso rosa della navbar */
+    padding: 25px;
+    border-left: 2px solid #ddd;
+    margin-left: 25px;
+    margin-right: 2px;
+    height: fit-content;
+}
+
+aside h2 {
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside ul li {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }

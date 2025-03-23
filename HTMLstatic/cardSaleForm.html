@@ -17,55 +17,57 @@
                 <h1 style="margin-left: 20px;"> Card Sale Form </h1>
             </div>
         </header>
-        <nav class="navbar">
-            <hr>
-            <a href="/index.html">Home </a> |
-            <a> Card sale form</a> |
-            <a href="/pikachuDetails.html">Pikachu details</a> |
-            <a href="/bulbasaurDetails.html">Bulbasaur details</a> |
-            <a href="/charmanderDetails.html">Charmander details</a> |
-            <a href="/userRegistrationForm.html">Registration Form</a>
-            <hr>
-        </nav>
-        <form>
-            <fieldset>
-                <legend>Sell a card</legend>
-                <div>
-                    <label for="cname">Card name:</label><br>
-                    <input type="text" id="cname" name="cname">
-                </div>
-                <div>
-                    <label for="author">Author:</label><br>
-                    <input type="text" id="author" name="author">
-                </div>
-                <div>
-                    <label for="date">Date:</label><br>
-                    <input type="date" id="date" name="date">
-                </div>
-                <div>
-                    <label for="condition">Condition</label>
-                    <select id="condition" name="condition">
-                        <option value="">Select Condition</option>
-                        <option value="mint">Mint</option>
-                        <option value="near-mint">Near Mint</option>
-                        <option value="excellent">Excellent</option>
-                        <option value="good">Good</option>
-                        <option value="light-played">Light Played</option>
-                        <option value="played">Played</option>
-                        <option value="poor">Poor</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="description">Descriptive text:</label>
-                    <textarea name="description" id="description">write description</textarea>
-                </div>
-                <div>
-                    <label for="image">Select the card image:</label>
-                    <input type ="file" id="image" name="image">
-                </div>
-            </fieldset>
-            <input type="submit" value="Create">
-        </form>
+        <div class="container-main">
+            <nav class="navbar">
+                <hr>
+                <a href="/index.html">Home </a> |
+                <a> Card sale form</a> |
+                <a href="/pikachuDetails.html">Pikachu details</a> |
+                <a href="/bulbasaurDetails.html">Bulbasaur details</a> |
+                <a href="/charmanderDetails.html">Charmander details</a>
+                <a href="/userRegistrationForm.html">Registration Form</a>
+                <hr>
+            </nav>
+            <form>
+                <fieldset>
+                    <legend>Sell a card</legend>
+                    <div>
+                        <label for="cname">Card name:</label><br>
+                        <input type="text" id="cname" name="cname">
+                    </div>
+                    <div>
+                        <label for="author">Author:</label><br>
+                        <input type="text" id="author" name="author">
+                    </div>
+                    <div>
+                        <label for="date">Date:</label><br>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div>
+                        <label for="condition">Condition</label>
+                        <select id="condition" name="condition">
+                            <option value="">Select Condition</option>
+                            <option value="mint">Mint</option>
+                            <option value="near-mint">Near Mint</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="light-played">Light Played</option>
+                            <option value="played">Played</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="description">Descriptive text:</label>
+                        <textarea name="description" id="description">write description</textarea>
+                    </div>
+                    <div>
+                        <label for="image">Select the card image:</label>
+                        <input type ="file" id="image" name="image">
+                    </div>
+                </fieldset>
+                <input type="submit" value="Create">
+            </form>
+        </div>
         <footer>
             <hr>
             <small> SUPSI card online shop - Copyleft CC-by <time datetime="2025">2025</time> by Giada </small>

@@ -1,3 +1,14 @@
+.container-main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+    justify-content: space-between;
+    margin-top: 3px;
+    padding: 0 5px;
+    width: 100%;
+}
+
+
 body {
     background-color: #ffe4e1; /* Rosa chiaro */
     font-family: Arial, sans-serif;
@@ -14,14 +25,16 @@ header {
     padding: 20px;
 }
 
+.navbar > a:nth-child(7) {margin-left: auto;}
+
 .navbar {
+    grid-column: span 12;
     background-color: #ffb6c1; /* Rosa più scuro */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     width: 100%;
-    text-align: center;
+    text-align: start;
 }
 
 .navbar a {
@@ -40,7 +53,7 @@ header {
 footer {
     background-color: #ffb6c1;
     text-align: center;
-    padding: 10px;
+    padding: 0;
     bottom: 0;
     left: 0;
     width: 100%;
