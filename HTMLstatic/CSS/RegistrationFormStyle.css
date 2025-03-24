@@ -1,22 +1,51 @@
+.valid {
+    border: 2px solid #00cc00 !important;
+    background-color: rgba(0, 204, 0, 0.05);
+}
+
+.invalid {
+    border: 2px solid #a90000 !important;
+    background-color: rgba(204, 0, 0, 0.05);
+}
+
+input {
+    min-height: 20px;
+}
+
+.form-group {
+    position: relative;
+}
 
 
-form {
-    grid-column: span 12;
-    background-color: white;
-    padding: 20px 20px 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto auto auto;
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.valid + .validation-icon::after {
+    content: '✓';
+    color: #0c940c;
+}
+
+.invalid + .validation-icon::after {
+    content: '✗';
+    color: #a90000;
+}
+
+#register {
+    visibility: hidden;
 }
 
 fieldset {
     border: 2px solid lightpink;
-    border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 10px;
-    max-width: 100%;
+    border-radius: 15px;
+    display:grid;
+    grid-template-columns: 1fr;
+    height: 100%;
 }
 
 legend {
@@ -24,33 +53,49 @@ legend {
     color: lightpink;
 }
 
-div {
+fieldset > div {
+    grid-column: 1/5;
     margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
-label {
+fieldset > div > label {
     font-weight: bold;
+    min-width: 150px;
+    grid-column: 1/2;
 }
 
-input, select, textarea {
-    width: 99%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
+fieldset > div > input {
+    padding: 5px 10px;
+    grid-column: 2/5;
+    border-radius: 5px;
+    border:none;
+}
+
+fieldset > div > select{
+    grid-column: 2/5;
+}
+
+fieldset > div > textarea{
+    padding: 5px 10px;
+    grid-column: 2/5;
+    border: none;
     border-radius: 5px;
 }
 
 
-#submit-button {
+form > input {
+    padding: 10px;
+    border-radius: 5px;
     background-color: lightpink;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+    color:white;
+    box-shadow: none;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 5px;
 }
 
-#submit-button:hover {
+
+form > input:hover {
     background-color: darkgray;
 }

@@ -1,61 +1,34 @@
-/* Styling specific to the card details page */
 
-
-main {
-    grid-column: span 8;
-    flex: 2;
-    max-width: 900px;
-    padding: 10px 10px 10px 30px;
-}
-
-article {
-    display: flex;
-    padding: 10px 10px 10px 30px;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-article img {
-    margin-left: auto;
-}
-
-h2 {
-    color: #444;
-    margin: 20px 0;
-    font-size: 24px;
-}
-
-p {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-time {
-    font-style: italic;
-    color: #666;
-}
-
-aside {
-    grid-row: 3/10;
-    grid-column: 4/4;
-    border-left:1px solid white;
-    padding: 20px;
-}
-
-aside h2 {
-    color: #444;
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-
-.news {
+article.card {
+    background-color: #f9f9f9;
+    border: 1px solid #f1f1f1;
+    border-radius: 15px;
+    margin: 10px;
     padding: 10px;
-    border-bottom: 1px dashed white;
 }
+
+.announcementDetails {
+    border-bottom: 1px solid black;
+    padding: 10px 5px
+}
+
+.cardDetails {
+    padding: 20px 0px;
+    display: flex;
+    gap: 15px
+}
+
+.cardInfo {
+    display: grid;
+    grid-template-columns: 120px 5fr;
+    gap: 10px;
+    padding:10px 0px;
+}
+
+@media screen and (max-width: 700px) {
+    .cardDetails {
+        flex-direction: column;
+    }
+
+}
+
