@@ -19,14 +19,15 @@ body {
 }
 
 .logo {
+    margin-top: -30px;
     width: 450px;
     height: 200px;
 }
 
 header {
     background-image: url("../images/background.jpg");
-    background-size: 400px;
-    background-position: center;
+    background-size: 700px;
+    background-position: left;
     grid-row: 1;
     grid-column: 1/5;
     display:flex;

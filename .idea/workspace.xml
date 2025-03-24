@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/RegistrationFormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/RegistrationFormStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/cardSaleStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/cardSaleStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/detailsStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/detailsStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/userRegistrationForm.html" afterDir="false" />
-    </list>
+    <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +81,7 @@
       <workItem from="1742371979706" duration="8000" />
       <workItem from="1742635331901" duration="4720000" />
       <workItem from="1742716483300" duration="3781000" />
-      <workItem from="1742831477272" duration="4755000" />
+      <workItem from="1742831477272" duration="5082000" />
     </task>
     <servers />
   </component>
