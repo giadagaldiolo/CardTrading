@@ -93,6 +93,7 @@ form > input {
     box-shadow: none;
     cursor: pointer;
     font-weight: bold;
+    border-color: lightpink;
 }
 
 

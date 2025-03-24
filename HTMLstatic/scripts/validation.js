@@ -1,94 +1,110 @@
-function validateName(name) {
-    const nameRegex = /^[A-Za-z]+$/;
-    return nameRegex.test(name);
-}
+// Validation patterns using regexp
+const patterns = {
+    name: /^[A-Za-z]+$/,                      // Only upper and lowercase letters
+    username: /^[A-Za-z0-9_]+$/,              // Letters, numbers and underscore
+    password: /^[A-Za-z0-9_]{8,15}$/          // Letters, numbers, underscore, 8-15 chars
+};
 
+// Get all form elements
+const firstNameInput = document.getElementById('first-name');
+const lastNameInput = document.getElementById('last-name');
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('password-confirm');
+const formElement = document.querySelector('form');
+const registerBtn = document.querySelector('#register');
 
-function validateUsername(username) {
-    const usernameRegex = /^[A-Za-z0-9_]+$/;
-    return usernameRegex.test(username);
-}
-
-
-function validatePassword(password) {
-    const passwordRegex = /^[A-Za-z0-9_]{8,15}$/;
-    return passwordRegex.test(password);
-}
-
-
-function handleInputChange() {
-    const firstName = document.getElementById("first-name").value;
-    const lastName = document.getElementById("last-name").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("password-confirm").value;
-
-    let isFormValid = true;
-
-    const firstNameInput = document.getElementById("first-name");
-    if (!validateName(firstName)) {
-        firstNameInput.style.borderColor = "red";
-        isFormValid = false;
-    } else {
-        firstNameInput.style.borderColor = "green";
+// Validation function
+function validate(field, regex) {
+    if(field.value === '') {
+        field.classList.remove('valid');
+        field.classList.remove('invalid');
+        return false;
     }
-
-    const lastNameInput = document.getElementById("last-name");
-    if (!validateName(lastName)) {
-        lastNameInput.style.borderColor = "red";
-        isFormValid = false;
+    if (regex.test(field.value)) {
+        field.classList.remove('invalid');
+        field.classList.add('valid');
+        return true;
     } else {
-        lastNameInput.style.borderColor = "green";
-    }
-
-    const usernameInput = document.getElementById("username");
-    if (!validateUsername(username)) {
-        usernameInput.style.borderColor = "red";
-        isFormValid = false;
-    } else {
-        usernameInput.style.borderColor = "green";
-    }
-
-    const passwordInput = document.getElementById("password");
-    if (!validatePassword(password)) {
-        passwordInput.style.borderColor = "red";
-        isFormValid = false;
-    } else {
-        passwordInput.style.borderColor = "green";
-    }
-
-    const confirmPasswordInput = document.getElementById("password-confirm");
-    if (password !== confirmPassword || !validatePassword(confirmPassword)) {
-        confirmPasswordInput.style.borderColor = "red";
-        isFormValid = false;
-    } else {
-        confirmPasswordInput.style.borderColor = "green";
-    }
-
-    const submitContainer = document.getElementById("submit-container");
-
-    if (isFormValid) {
-        if (!document.getElementById("submit-button")) {
-            const submitButton = document.createElement("button");
-            submitButton.id = "submit-button";
-            submitButton.textContent = "Submit";
-            submitButton.onclick = function() {
-                alert("Account creation in progress");
-            };
-            submitContainer.appendChild(submitButton);
-        }
-    } else {
-        const submitButton = document.getElementById("submit-button");
-        if (submitButton) {
-            submitContainer.removeChild(submitButton);
-        }
+        field.classList.remove('valid');
+        field.classList.add('invalid');
+        return false;
     }
 }
 
-document.getElementById("first-name").addEventListener("input", handleInputChange);
-document.getElementById("last-name").addEventListener("input", handleInputChange);
-document.getElementById("username").addEventListener("input", handleInputChange);
-document.getElementById("password").addEventListener("input", handleInputChange);
-document.getElementById("password-confirm").addEventListener("input", handleInputChange);
+// Function to check if passwords match
+function checkPasswordsMatch() {
+    if (passwordInput.value === '' || confirmPasswordInput.value === '') {
+        confirmPasswordInput.classList.remove('valid');
+        confirmPasswordInput.classList.remove('invalid');
+        return false;
+    }
+    if (passwordInput.value === confirmPasswordInput.value &&
+        passwordInput.value !== '' &&
+        patterns.password.test(passwordInput.value)) {
+        confirmPasswordInput.classList.remove('invalid');
+        confirmPasswordInput.classList.add('valid');
+        return true;
+    } else {
+        confirmPasswordInput.classList.remove('valid');
+        confirmPasswordInput.classList.add('invalid');
+        return false;
+    }
+}
 
-handleInputChange();
+// Function to check if all fields are valid
+function checkAllValid() {
+    const firstName = validate(firstNameInput, patterns.name);
+    const lastName = validate(lastNameInput, patterns.name);
+    const username = validate(usernameInput, patterns.username);
+    const password = validate(passwordInput, patterns.password);
+    const passwordsMatch = checkPasswordsMatch();
+
+    if (firstName && lastName && username && password && passwordsMatch) {
+        registerBtn.style.visibility = 'visible';
+    } else {
+        // Hides submit button
+        registerBtn.style.visibility = 'hidden';
+    }
+}
+
+// Event listeners for each input field
+firstNameInput.addEventListener('input', () => {
+    validate(firstNameInput, patterns.name);
+    checkAllValid();
+});
+
+lastNameInput.addEventListener('input', () => {
+    validate(lastNameInput, patterns.name);
+    checkAllValid();
+});
+
+usernameInput.addEventListener('input', () => {
+    validate(usernameInput, patterns.username);
+    checkAllValid();
+});
+
+passwordInput.addEventListener('input', () => {
+    validate(passwordInput, patterns.password);
+    checkPasswordsMatch();
+    checkAllValid();
+});
+
+confirmPasswordInput.addEventListener('input', () => {
+    checkPasswordsMatch();
+    checkAllValid();
+});
+
+// Form submission handler
+formElement.addEventListener('submit', (e) => {
+    // Prevents to actually submit the form for now
+    e.preventDefault();
+    alert('Account creation in progress');
+});
+
+// Add validation icons
+document.querySelectorAll('.form-group').forEach(group => {
+    const validationIcon = document.createElement('span');
+    validationIcon.className = 'validation-icon';
+    group.appendChild(validationIcon);
+});
