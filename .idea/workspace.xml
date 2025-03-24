@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HTMLstatic/images/background.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/cardSaleStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/cardSaleStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/RegistrationFormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/RegistrationFormStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/detailsStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/detailsStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/indexStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/indexStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/bulbasaurDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/charmanderDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/pikachuDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTMLstatic/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/userRegistrationForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,22 +41,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Documents/GitHub/educational-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/giada/Documents/GitHub/galdiolo/HTMLstatic/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\giada\Documents\GitHub\galdiolo\HTMLstatic\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\giada\Documents\GitHub\galdiolo\HTMLstatic\images" />
     </key>
@@ -82,7 +93,8 @@
       <workItem from="1742290718687" duration="4451000" />
       <workItem from="1742371979706" duration="8000" />
       <workItem from="1742635331901" duration="4720000" />
-      <workItem from="1742716483300" duration="3471000" />
+      <workItem from="1742716483300" duration="3781000" />
+      <workItem from="1742831477272" duration="3348000" />
     </task>
     <servers />
   </component>

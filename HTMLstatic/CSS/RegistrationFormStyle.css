@@ -1,13 +1,9 @@
-* {
-    box-sizing: border-box; /* Evita problemi di dimensioni */
-}
-
 
 
 form {
     grid-column: span 12;
     background-color: white;
-    padding: 20px 20px 50px 20px;
+    padding: 20px 20px 30px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;

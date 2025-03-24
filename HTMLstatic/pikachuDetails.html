@@ -12,43 +12,44 @@
     </head>
     <body>
         <header>
-            <div style="display: flex; align-items: center">
-                <img src="images/newLogo.png" width="450" height="200" alt="logo">
-                <h1 style="margin-left: 20px;"> Card Sale Details </h1>
-            </div>
+            <img class="logo" src="images/newLogo.png" alt="logo">
+            <h1> Card Sale Details </h1>
         </header>
-        <div class="container-main">
-            <nav class="navbar">
-                <hr>
-                <a href="/index.html">Home </a> |
-                <a href="/cardSaleForm.html">Card sale details</a> |
-                <a>Pikachu details</a> |
-                <a href="/bulbasaurDetails.html">Bulbasaur details</a> |
-                <a href="/charmanderDetails.html">Charmander details</a>
-                <a href="/userRegistrationForm.html">Registration Form</a>
-                <hr>
-            </nav>
-            <main>
-                <h2>Pikachu Card Announcement</h2>
-                <article>
-                    <div>
-                        <p>Author: author</p>
-                        <p>Date: <time datetime="2025-03-04">2025-03-04</time></p>
-                        <p>Condition: mint</p>
-                        <p>Description: something</p>
-                    </div>
-                    <img src="images/pikachu.jpg" alt="Pikachu Card" width="200">
-                </article>
-            </main>
+        <nav class="navbar">
+            <a class="menuItem" href="/index.html">Home </a>
+            <a class="menuItem" href="/cardSaleForm.html">Card sale form</a>
+            <a class="menuItem" href="#">Pikachu details</a>
+            <a class="menuItem" href="/bulbasaurDetails.html">Bulbasaur details</a>
+            <a class="menuItem" href="/charmanderDetails.html">Charmander details</a>
+            <div class="menuItem registerBtn">
+                <a href="/userRegistrationForm.html"></a>
+            </div>
+        </nav>
+        <main>
+            <h2>Pikachu Card Announcement</h2>
+            <article>
+                <div>
+                    <p>Author: author</p>
+                    <p>Date: <time datetime="2025-03-04">2025-03-04</time></p>
+                    <p>Condition: mint</p>
+                    <p>Description: something</p>
+                </div>
+                <img src="images/pikachu.jpg" alt="Pikachu Card" width="200">
+            </article>
+        </main>
 
-            <aside>
-                <h2>News</h2>
-                <ul>
-                    <li>#PP2 | New version of the platform: CSS added</li>
-                    <li>#PP1 | First version online!</li>
-                </ul>
-            </aside>
-        </div>
+        <h2>News</h2>
+        <ul>
+            <li class="news">
+                #PP3 | Added register form with JS validation
+            </li>
+            <li class="news">
+                #PP2 | New version of the platform with CSS
+            </li>
+            <li class="news">
+                #PP1 | First version online!
+            </li>
+        </ul>
 
         <footer>
             <hr>

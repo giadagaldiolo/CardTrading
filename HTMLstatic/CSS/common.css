@@ -1,45 +1,57 @@
-* {
+html {
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-.container-main {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 50px 350px 50px;
-    justify-content: space-between;
-    margin-top: 3px;
-    padding: 0 5px;
-    width: 100%;
 }
 
 
 body {
-    background-color: #ffe4e1; /* Rosa chiaro */
+    background-color: #ffe4e1;
     font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 130px 80px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    width: 450px;
+    height: 200px;
 }
 
 header {
+    background-image: url("../images/background.jpg");
+    background-size: 400px;
+    background-position: center;
+    grid-row: 1;
+    grid-column: 1/5;
+    display:flex;
+    flex-direction: row;
+    background-color: #253741;
+    color: white;
+    padding: 10px;
     text-align: center;
-    padding: 20px;
 }
 
-.navbar > a:nth-child(7) {margin-left: auto;}
+header h1 {
+    color: black;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
 
 .navbar {
-    grid-column: span 12;
-    background-color: #ffb6c1; /* Rosa più scuro */
+    grid-row: 2/2;
+    grid-column: 1/5;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 10px;
+    align-items: stretch;
+    background-color: #ffb6c1;
 }
 
 .navbar a {
@@ -52,17 +64,87 @@ header {
 
 .navbar a:hover {
     color: white;
-    transform: scale(1.1);
 }
 
+nav .menuItem{
+    padding: 0px 20px;
+    border-right: 1px solid white;
+    line-height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 80px;
+    text-wrap: nowrap;
+}
+nav .menuItem.registerBtn {
+    flex-grow: 1;
+    align-items: end;
+    align-content: end;
+    display: flex;
+    flex-direction: row-reverse;
+    border: none;
+    min-width: 40px;
+
+}
+
+.menuItem.registerBtn a{
+    display: inline-block;
+    background-image: url("../images/User_Icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    padding: 0px 20px;
+}
+
+main {
+    grid-row: 3/10;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding:20px;
+}
+
+main h2 {
+    color: #444;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+aside {
+    grid-row: 3/10;
+    grid-column: 4/4;
+    border-left:1px solid white;
+    padding: 20px;
+}
+
+aside h2 {
+    color: #444;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.news {
+    padding: 10px;
+    border-bottom: 1px dashed white;
+}
+
+
 footer {
-    background-color: #ffb6c1;
-    text-align: center;
-    padding: 2px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    position: fixed;
+    grid-row: 10/10;
+    grid-column: 1/5;
+    border: 1px solid lightpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightpink;
 }
 
 footer small {
