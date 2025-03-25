@@ -1,0 +1,102 @@
+.valid {
+    border: 2px solid #00cc00 !important;
+    background-color: rgba(0, 204, 0, 0.05);
+}
+
+.invalid {
+    border: 2px solid #a90000 !important;
+    background-color: rgba(204, 0, 0, 0.05);
+}
+
+input {
+    min-height: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+
+.validation-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.valid + .validation-icon::after {
+    content: '✓';
+    color: #0c940c;
+}
+
+.invalid + .validation-icon::after {
+    content: '✗';
+    color: #a90000;
+}
+
+#register {
+    visibility: hidden;
+}
+
+fieldset {
+    border: 2px solid lightpink;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display:grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+legend {
+    font-weight: bold;
+    color: lightpink;
+}
+
+fieldset > div {
+    grid-column: 1/5;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+fieldset > div > label {
+    font-weight: bold;
+    min-width: 150px;
+    grid-column: 1/2;
+}
+
+fieldset > div > input {
+    padding: 5px 10px;
+    grid-column: 2/5;
+    border-radius: 5px;
+    border:none;
+}
+
+fieldset > div > select{
+    grid-column: 2/5;
+}
+
+fieldset > div > textarea{
+    padding: 5px 10px;
+    grid-column: 2/5;
+    border: none;
+    border-radius: 5px;
+}
+
+
+form > input {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightpink;
+    color:white;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-color: lightpink;
+}
+
+
+form > input:hover {
+    background-color: darkgray;
+}

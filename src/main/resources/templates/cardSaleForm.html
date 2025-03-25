@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SUPSI Card Online Shop - Card Sale Form</title>
+        <meta name="author" content="Giada Galdiolo">
+        <meta name="date" content="2025-03-11" scheme="YYYY-MM-DD">
+        <meta name="description" content="form to sell a card in the SUPSI card online shop">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="buy, sell, card, shop">
+        <link rel="stylesheet" type="text/css" href="/CSS/common.css"/>
+        <link rel="stylesheet" type="text/css" href="/CSS/cardSaleStyle.css" />
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/images/newLogo.png" alt="logo">
+            <h1> Card Sale Form </h1>
+        </header>
+        <nav class="navbar">
+            <a class="menuItem" href="index.html">Home </a>
+            <a class="menuItem" href="#"> Card sale form</a>
+            <a class="menuItem" href="/pikachuDetails.html">Pikachu details</a>
+            <a class="menuItem" href="/bulbasaurDetails.html">Bulbasaur details</a>
+            <a class="menuItem" href="/charmanderDetails.html">Charmander details</a>
+            <div class="menuItem registerBtn">
+                <a href="/userRegistrationForm.html"></a>
+            </div>
+        </nav>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Sell a card</legend>
+                    <div>
+                        <label for="cname">Card name:</label><br>
+                        <input type="text" id="cname" name="cname">
+                    </div>
+                    <div>
+                        <label for="author">Author:</label><br>
+                        <input type="text" id="author" name="author">
+                    </div>
+                    <div>
+                        <label for="date">Date:</label><br>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div>
+                        <label for="condition">Condition</label>
+                        <select id="condition" name="condition">
+                            <option value="">Select Condition</option>
+                            <option value="mint">Mint</option>
+                            <option value="near-mint">Near Mint</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="light-played">Light Played</option>
+                            <option value="played">Played</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="description">Descriptive text:</label>
+                        <textarea name="description" id="description">write description</textarea>
+                    </div>
+                    <div>
+                        <label for="image">Select the card image:</label>
+                        <input type ="file" id="image" name="image">
+                    </div>
+                </fieldset>
+                <input type="submit" value="Create">
+            </form>
+        </main>
+        <aside>
+            <h2>News</h2>
+            <ul>
+                <li class="news">
+                    #PP3 | Added register form with JS validation
+                </li>
+                <li class="news">
+                    #PP2 | New version of the platform with CSS
+                </li>
+                <li class="news">
+                    #PP1 | First version online!
+                </li>
+            </ul>
+        </aside>
+        <footer>
+            <hr>
+            <small> SUPSI card online shop - Copyleft CC-by <time datetime="2025">2025</time> by Giada </small>
+            <hr>
+        </footer>
+    </body>
+</html>

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTMLstatic/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLstatic/CSS/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,16 @@
       <recent name="C:\Users\giada\Documents\GitHub\galdiolo\HTMLstatic\images" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="CardgamesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="cardgames" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.supsi.web.cardgames.CardgamesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -85,7 +94,7 @@
       <workItem from="1742635331901" duration="4720000" />
       <workItem from="1742716483300" duration="3781000" />
       <workItem from="1742831477272" duration="5386000" />
-      <workItem from="1742887602846" duration="951000" />
+      <workItem from="1742887602846" duration="1649000" />
     </task>
     <servers />
   </component>
