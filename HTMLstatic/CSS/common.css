@@ -7,11 +7,12 @@ html {
 
 
 body {
+    min-height: 100vh;
     background-color: #ffe4e1;
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 130px 80px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px;
+    grid-template-rows: 130px 80px auto auto auto auto auto auto auto 30px;
     margin: 0;
     padding: 0;
     height: 100%;
