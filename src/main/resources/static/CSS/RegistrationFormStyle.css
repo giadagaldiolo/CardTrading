@@ -34,9 +34,6 @@ input {
     color: #a90000;
 }
 
-#register {
-    visibility: hidden;
-}
 
 fieldset {
     border: 2px solid lightpink;

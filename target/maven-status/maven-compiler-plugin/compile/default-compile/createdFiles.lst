@@ -1,0 +1,6 @@
+ch\supsi\web\cardgames\Service\CardService.class
+ch\supsi\web\cardgames\Model\Card.class
+ch\supsi\web\cardgames\Controller\MainController.class
+ch\supsi\web\cardgames\CardgamesApplication.class
+ch\supsi\web\cardgames\Service\MainService.class
+ch\supsi\web\cardgames\Model\Condition.class

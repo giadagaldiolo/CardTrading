@@ -12,7 +12,15 @@ const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('password-confirm');
 const formElement = document.querySelector('form');
-const registerBtn = document.querySelector('#register');
+
+// Create submit button
+function createRegisterButton() {
+    const registerBtn = document.createElement('input');
+    registerBtn.id = 'register';
+    registerBtn.type = 'submit';
+    registerBtn.value = 'Register';
+    return registerBtn;
+}
 
 // Validation function
 function validate(field, regex) {
@@ -60,11 +68,14 @@ function checkAllValid() {
     const password = validate(passwordInput, patterns.password);
     const passwordsMatch = checkPasswordsMatch();
 
+    const existingButton = document.getElementById('register');
+    if (existingButton) {
+        existingButton.remove();
+    }
+
     if (firstName && lastName && username && password && passwordsMatch) {
-        registerBtn.style.visibility = 'visible';
-    } else {
-        // Hides submit button
-        registerBtn.style.visibility = 'hidden';
+        // Add button to DOM if all fields are valid
+        formElement.appendChild(createRegisterButton());
     }
 }
 
