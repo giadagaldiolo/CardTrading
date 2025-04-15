@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 public class Card {
-    private String name;
+    private String cname;
     private String description;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;

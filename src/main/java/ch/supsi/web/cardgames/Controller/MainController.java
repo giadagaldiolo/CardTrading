@@ -15,12 +15,19 @@ import java.io.IOException;
 @Controller
 public class MainController {
 
-    CardService cardService = new CardService();
-    MainService mainService = new MainService();
+    private final CardService cardService;
+    private final MainService mainService;
+
+    public MainController(CardService cardService, MainService mainService) {
+        this.cardService = cardService;
+        this.mainService = mainService;
+    }
 
     @GetMapping("/")
-    public String getIndexPage() throws IOException {
-        return "index.html";
+    public ResponseEntity<String> getIndexPage() throws IOException {
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_HTML)
+                .body(this.mainService.getAndPopulateHTMLHomePage(cardService.getCards()));
     }
 
     @GetMapping("card/new")

@@ -26,7 +26,7 @@
             </div>
         </nav>
         <main>
-            <form>
+            <form method="post" action="/card/new">
                 <fieldset>
                     <legend>Sell a card</legend>
                     <div>
@@ -45,18 +45,18 @@
                         <label for="condition">Condition</label>
                         <select id="condition" name="condition">
                             <option value="">Select Condition</option>
-                            <option value="mint">Mint</option>
-                            <option value="near-mint">Near Mint</option>
-                            <option value="excellent">Excellent</option>
-                            <option value="good">Good</option>
-                            <option value="light-played">Light Played</option>
-                            <option value="played">Played</option>
-                            <option value="poor">Poor</option>
+                            <option value="MINT">Mint</option>
+                            <option value="NEAR_MINT">Near Mint</option>
+                            <option value="EXCELLENT">Excellent</option>
+                            <option value="GOOD">Good</option>
+                            <option value="LIGHT_PLAYED">Light Played</option>
+                            <option value="PLAYED">Played</option>
+                            <option value="POOR">Poor</option>
                         </select>
                     </div>
                     <div>
                         <label for="description">Descriptive text:</label>
-                        <textarea name="description" id="description">write description</textarea>
+                        <textarea name="description" id="description"></textarea>
                     </div>
                     <div>
                         <label for="image">Select the card image:</label>

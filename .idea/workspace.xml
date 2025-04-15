@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/CardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/MainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bulbasaurDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/charmanderDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/pikachuDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userRegistrationForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/MainService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/MainService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,7 @@
       <workItem from="1744093872384" duration="2190000" />
       <workItem from="1744103952089" duration="1316000" />
       <workItem from="1744180442555" duration="40000" />
-      <workItem from="1744698517768" duration="1634000" />
+      <workItem from="1744698517768" duration="3485000" />
     </task>
     <servers />
   </component>
