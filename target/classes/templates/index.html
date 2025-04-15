@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>SUPSI Card Online Shop</title>
         <meta name="author" content="Giada Galdiolo">
@@ -15,21 +15,14 @@
             <img class="logo" src="/images/newLogo.png" alt="logo">
             <h1> SUPSI Card Online shop </h1>
         </header>
-        <nav class="navbar">
-            <a class="menuItem" href="/"> Home </a>
-            <a class="menuItem" href="/card/new">Card sale form</a>
-            <a class="menuItem" href="/pikachuDetails.html">Pikachu details</a>
-            <a class="menuItem" href="/bulbasaurDetails.html">Bulbasaur details</a>
-            <a class="menuItem" href="/charmanderDetails.html">Charmander details</a>
-            <div class="menuItem registerBtn">
-                <a href="/userRegistrationForm.html"></a>
-            </div>
-        </nav>
+        <div th:replace="fragments/navbar :: navbar"></div>
         <main>
             <section>
                 <h2> Card announcements </h2>
                 <ul class="announcementsList">
-                    $$cards
+                    <li th:each="card : ${cards}">
+                        <a th:href="@{'/card/' + ${card.id}}" th:text="${card.cname}"></a>
+                    </li>
                 </ul>
             </section>
         </main>

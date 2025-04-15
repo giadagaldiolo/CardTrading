@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>SUPSI Card Online Shop - Card Sale Form</title>
         <meta name="author" content="Giada Galdiolo">
@@ -15,35 +15,26 @@
             <img class="logo" src="/images/newLogo.png" alt="logo">
             <h1> Card Sale Form </h1>
         </header>
-        <nav class="navbar">
-            <a class="menuItem" href="/">Home </a>
-            <a class="menuItem" href="/card/new"> Card sale form</a>
-            <a class="menuItem" href="/pikachuDetails.html">Pikachu details</a>
-            <a class="menuItem" href="/bulbasaurDetails.html">Bulbasaur details</a>
-            <a class="menuItem" href="/charmanderDetails.html">Charmander details</a>
-            <div class="menuItem registerBtn">
-                <a href="/userRegistrationForm.html"></a>
-            </div>
-        </nav>
+        <div th:replace="fragments/navbar :: navbar"></div>
         <main>
-            <form method="post" action="/card/new">
+            <form method="post" th:action="@{/card/new}" th:object="${card}">
                 <fieldset>
                     <legend>Sell a card</legend>
                     <div>
                         <label for="cname">Card name:</label><br>
-                        <input type="text" id="cname" name="cname">
+                        <input type="text" id="cname" th:field="*{cname}">
                     </div>
                     <div>
                         <label for="author">Author:</label><br>
-                        <input type="text" id="author" name="author">
+                        <input type="text" id="author" th:field="*{author}">
                     </div>
                     <div>
                         <label for="date">Date:</label><br>
-                        <input type="date" id="date" name="date">
+                        <input type="date" id="date" th:field="*{date}">
                     </div>
                     <div>
                         <label for="condition">Condition</label>
-                        <select id="condition" name="condition">
+                        <select id="condition" th:field="*{condition}">
                             <option value="">Select Condition</option>
                             <option value="MINT">Mint</option>
                             <option value="NEAR_MINT">Near Mint</option>
@@ -56,7 +47,7 @@
                     </div>
                     <div>
                         <label for="description">Descriptive text:</label>
-                        <textarea name="description" id="description"></textarea>
+                        <textarea id="description" th:field="*{description}"></textarea>
                     </div>
                     <div>
                         <label for="image">Select the card image:</label>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav class="navbar" th:fragment="navbar">
+    <a class="menuItem" th:href="@{/}">Home</a>
+    <a class="menuItem" th:href="@{/card/new}">Card sale form</a>
+    <div class="menuItem registerBtn">
+        <a th:href="@{/register}">Register</a>
+    </div>
+</nav>
+</body>
+</html>
