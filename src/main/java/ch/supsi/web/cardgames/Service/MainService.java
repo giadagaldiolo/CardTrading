@@ -8,10 +8,13 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.core.io.Resource;
+import org.springframework.web.servlet.ModelAndView;
 
 public class MainService {
     public String getAndPopulateHTMLHomePage(List<Card> cards){
         Resource resource = new ClassPathResource("templates/index.html");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index.html");
         String file = null;
         try {
             file = resource.getContentAsString(Charset.defaultCharset());

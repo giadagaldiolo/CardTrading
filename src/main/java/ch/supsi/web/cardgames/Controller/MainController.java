@@ -19,10 +19,8 @@ public class MainController {
     MainService mainService = new MainService();
 
     @GetMapping("/")
-    public ResponseEntity<String> getIndexPage() throws IOException {
-        return ResponseEntity.ok()
-                .contentType(MediaType.TEXT_HTML)
-                .body(this.mainService.getAndPopulateHTMLHomePage(cardService.getCards()));
+    public String getIndexPage() throws IOException {
+        return "index.html";
     }
 
     @GetMapping("card/new")

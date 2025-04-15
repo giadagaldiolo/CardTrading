@@ -5,38 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8397f7b1-8aaf-425e-9226-c87ed53bfaef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/CardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/MainService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/RegistrationFormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/RegistrationFormStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/MainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/MainService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bulbasaurDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bulbasaurDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/charmanderDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/charmanderDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/pikachuDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/pikachuDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/userRegistrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/CardgamesApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/CSS/RegistrationFormStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/CSS/cardSaleStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/CSS/common.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/CSS/detailsStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/CSS/indexStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/bulbasaurDetails.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/charmanderDetails.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/images/Bulbasaur.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/images/Charmander.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/images/User_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/images/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/images/newLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/images/pikachu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/pikachuDetails.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/scripts/validation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/HTMLstatic/userRegistrationForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ch/supsi/web/cardgames/CardgamesApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +34,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -67,34 +46,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Maven.cardgames [clean].executor": "Run",
-    "Maven.cardgames [install].executor": "Run",
-    "Maven.cardgames [org.springframework.boot:spring-boot-maven-plugin:3.4.4:run].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CardgamesApplication.executor": "Run",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/giada/Downloads/spring-project-basic-example/spring-project-basic-example",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.cardgames [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.cardgames [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.cardgames [org.springframework.boot:spring-boot-maven-plugin:3.4.4:run].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CardgamesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Downloads/spring-project-basic-example/spring-project-basic-example&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\giada\Documents\GitHub\galdiolo\src\main\resources\static" />
@@ -153,7 +132,9 @@
       <workItem from="1743488495967" duration="593000" />
       <workItem from="1743513198070" duration="10000" />
       <workItem from="1744093872384" duration="2190000" />
-      <workItem from="1744103952089" duration="1181000" />
+      <workItem from="1744103952089" duration="1316000" />
+      <workItem from="1744180442555" duration="40000" />
+      <workItem from="1744698517768" duration="1634000" />
     </task>
     <servers />
   </component>
