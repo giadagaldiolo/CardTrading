@@ -8,15 +8,14 @@ import java.util.Date;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor @ToString
 public class Card {
-    private Long id;
+    private int id;
     private String cname;
     private String description;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate date;
+    private Date date;
     private String author;
     private Condition condition;
     private CardType cardType;
     private String image;
-
 
 }

@@ -6,7 +6,6 @@ import ch.supsi.web.cardgames.Model.CardType;
 import ch.supsi.web.cardgames.Service.CardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -19,11 +18,11 @@ public class ThymeLeafCardController {
         this.cardService = cardService;
     }
 
-    @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("cards", cardService.getCards());
-        return "index";
+    @GetMapping("/not-found")
+    public String getCardNotFoundPage(){
+        return "card-not-found";
     }
+
 
     @GetMapping("/card/new")
     public String newCardForm(Model model) {
@@ -33,38 +32,49 @@ public class ThymeLeafCardController {
     }
 
     @PostMapping("/card/new")
-    public String createCard(@ModelAttribute Card card) {
+    public String createCard(Card card) {
         cardService.saveCard(card);
         return "redirect:/";
     }
 
     @GetMapping("/card/{id}")
-    public String cardDetail(@PathVariable Long id, Model model) {
-        model.addAttribute("card", cardService.getCardById(id));
+    public String cardDetail(@PathVariable int id, Model model) {
+        Card card = cardService.getCardById(id);
+        if(card == null){
+            return "redirect:/card/not-found";
+        }
+        model.addAttribute("card", card);
         return "details";
     }
 
     @GetMapping("/card/{id}/edit")
-    public String editCardForm(@PathVariable Long id, Model model) {
-        model.addAttribute("card", cardService.getCardById(id));
-        model.addAttribute("cardTypes", CardType.values());
+    public String editCardForm(@PathVariable int id, Model model) {
+        Card card = cardService.getCardById(id);
+        if(card == null){
+            return "redirect:/cards/not-found";
+        }
+        model.addAttribute("card", card);
         return "cardEditForm";
     }
 
     @PostMapping("/card/{id}/edit")
-    public String updateCard(@PathVariable Long id, @ModelAttribute Card card) {
-        cardService.updateCard(id, card);
-        return "redirect:/";
+    public String updateCard(@PathVariable int id, Card card) {
+        Card existingCard = cardService.getCardById(id);
+        if(existingCard == null){
+            return "redirect:/card/not-found";
+        }
+        cardService.updateCard(card, existingCard);
+        return "redirect:/card/" + id;
     }
 
     @GetMapping("/card/{id}/delete")
-    public String deleteCard(@PathVariable Long id) {
-        cardService.deleteById(id);
+    public String deleteCard(@PathVariable int id) {
+        Card card = cardService.getCardById(id);
+        if(card == null){
+            return "redirect:/card/not-found";
+        }
+        cardService.deleteCard(card);
         return "redirect:/";
     }
 
-    @GetMapping("/register")
-    public String registerForm() {
-        return "userRegistrationForm";
-    }
 }
