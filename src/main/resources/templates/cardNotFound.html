@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<main th:replace="~{fragments/layout :: layout(
+    pageTitle='Card Not Found - SUPSI card online shop',
+    headerTitle='Card Not Found',
+    pageDescription='Card not found page of SUPSI card online shop',
+    additionalCss=null,
+    pageScripts=null,
+    pageContent=~{:: content}
+)}">
+    <section th:fragment="content" class="not-found-section">
+        <h2>Card Not Found</h2>
+        <div class="not-found-container">
+            <div class="not-found-image">
+                <img th:src="@{/images/not-found.png}" alt="Card Not Found" />
+            </div>
+            <div class="not-found-message">
+                <h3>Oops! The card you were looking for doesn't exist.</h3>
+                <p>The card may have been sold, removed, or never existed in our database.</p>
+                <p>You might want to:</p>
+                <ul>
+                    <li>Check if the URL is correct</li>
+                    <li>Browse our <a th:href="@{/}">collection of available cards</a></li>
+                    <li><a th:href="@{/card/new}">Sell your own card</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,22 @@
+<div class="card trading-card" th:fragment="card(card)">
+    <div class="card-header">
+        <h3 class="card-title card-name" th:text="${card.name}">Name</h3>
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-center align-items-center">
+            <img class="img-fluid" th:src="${card.base64Image}" th:alt="${card.name}" />
+        </div>
+        <div class="card-body-badge d-flex justify-content-center align-items-center gap-2 mt-3">
+            <span class="badge bg-secondary card-type" th:text="${card.type}">Type</span>
+            <span class="badge card-condition"
+                  th:classappend="${'condition-' + #strings.toLowerCase(#strings.replace(card.condition, '_', '-'))}"
+                  th:text="${card.condition}">Condition</span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p class="card-text card-description" th:text="${card.description}">Description</p>
+        <div>
+            <p class="card-date mt-2" th:text="${card.date}">Date</p>
+        </div>
+    </div>
+</div>

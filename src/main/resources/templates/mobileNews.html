@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<main th:replace="~{fragments/layout :: layout(
+    pageTitle='News - SUPSI card online shop',
+    headerTitle='News',
+    pageDescription='Mobile news page of SUPSI card online shop',
+    additionalCss=@{'/css/mobile-news.css'},
+    pageScripts=null,
+    pageContent=~{:: content}
+)}">
+    <section th:fragment="content" class="container py-4">
+        <h1 class="text-center mb-4">Latest Updates</h1>
+
+        <div class="position-relative ps-4">
+            <div class="position-absolute top-0 bottom-0 start-0 border-start border-2"></div>
+
+            <div class="position-relative mb-4">
+                <div class="position-absolute start-0 translate-middle rounded-circle bg-primary" style="width: 12px; height: 12px; border: 2px solid white; box-shadow: 0 0 0 2px #007bff;"></div>
+                <div class="ms-4">
+                    <div class="fw-bold text-primary mb-2">#PP6</div>
+                    <div class="bg-light p-3 rounded shadow-sm">
+                        <p class="mb-0">Added bootstrap, thymeleaf fragments and image upload</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-relative mb-4">
+                <div class="position-absolute start-0 translate-middle rounded-circle bg-primary" style="width: 12px; height: 12px; border: 2px solid white; box-shadow: 0 0 0 2px #007bff;"></div>
+                <div class="ms-4">
+                    <div class="fw-bold text-primary mb-2">#PP5</div>
+                    <div class="bg-light p-3 rounded shadow-sm">
+                        <p class="mb-0">Added thymeleaf template engine</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-relative mb-4">
+                <div class="position-absolute start-0 translate-middle rounded-circle bg-primary" style="width: 12px; height: 12px; border: 2px solid white; box-shadow: 0 0 0 2px #007bff;"></div>
+                <div class="ms-4">
+                    <div class="fw-bold text-primary mb-2">#PP4</div>
+                    <div class="bg-light p-3 rounded shadow-sm">
+                        <p class="mb-0">Migrated to Spring Boot</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-relative mb-4">
+                <div class="position-absolute start-0 translate-middle rounded-circle bg-primary" style="width: 12px; height: 12px; border: 2px solid white; box-shadow: 0 0 0 2px #007bff;"></div>
+                <div class="ms-4">
+                    <div class="fw-bold text-primary mb-2">#PP3</div>
+                    <div class="bg-light p-3 rounded shadow-sm">
+                        <p class="mb-0">Added register form with JS validation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-relative mb-4">
+                <div class="position-absolute start-0 translate-middle rounded-circle bg-primary" style="width: 12px; height: 12px; border: 2px solid white; box-shadow: 0 0 0 2px lightpink;"></div>
+                <div class="ms-4">
+                    <div class="fw-bold text-primary mb-2">#PP2</div>
+                    <div class="bg-light p-3 rounded shadow-sm">
+                        <p class="mb-0">New version of the platform with CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="position-relative mb-4">
+                <div class="position-absolute start-0 translate-middle rounded-circle bg-primary" style="width: 12px; height: 12px; border: 2px solid white; box-shadow: 0 0 0 2px lightpink;"></div>
+                <div class="ms-4">
+                    <div class="fw-bold text-primary mb-2">#PP1</div>
+                    <div class="bg-light p-3 rounded shadow-sm">
+                        <p class="mb-0">First version online!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
