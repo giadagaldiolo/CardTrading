@@ -6,111 +6,155 @@ const patterns = {
 };
 
 // Get all form elements
+const form = document.querySelector('form');
 const firstNameInput = document.getElementById('first-name');
 const lastNameInput = document.getElementById('last-name');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('password-confirm');
-const formElement = document.querySelector('form');
 
-// Create submit button
-function createRegisterButton() {
-    const registerBtn = document.createElement('input');
-    registerBtn.id = 'register';
-    registerBtn.type = 'submit';
-    registerBtn.value = 'Register';
-    return registerBtn;
+// Track which fields have been touched
+const touchedFields = new Set();
+
+// Update error message function
+function updateErrorMessage(field, message) {
+    const feedbackElement = field.nextElementSibling;
+    if (feedbackElement && feedbackElement.classList.contains('invalid-feedback')) {
+        feedbackElement.textContent = message;
+    }
 }
 
 // Validation function
-function validate(field, regex) {
-    if(field.value === '') {
-        field.classList.remove('valid');
-        field.classList.remove('invalid');
+function validate(field, regex, fieldType) {
+    // Only validate if the field has been touched or is being submitted
+    if (!touchedFields.has(field) && !form.classList.contains('was-validated')) {
+        field.classList.remove('is-invalid');
+        field.classList.remove('is-valid');
         return false;
     }
-    if (regex.test(field.value)) {
-        field.classList.remove('invalid');
-        field.classList.add('valid');
-        return true;
-    } else {
-        field.classList.remove('valid');
-        field.classList.add('invalid');
+
+    if (field.value === '') {
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+        updateErrorMessage(field, `Please enter your ${fieldType}.`);
         return false;
     }
+
+    const isValid = regex.test(field.value);
+    field.classList.toggle('is-invalid', !isValid);
+    field.classList.toggle('is-valid', isValid);
+
+    if (!isValid) {
+        let errorMessage = '';
+        switch(fieldType) {
+            case 'first name':
+            case 'last name':
+                errorMessage = `Please enter your ${fieldType} using only letters.`;
+                break;
+            case 'username':
+                errorMessage = 'Username can only contain letters, numbers, and underscores.';
+                break;
+            case 'password':
+                errorMessage = 'Password must be 8-15 characters long and can only contain letters, numbers, and underscores.';
+                break;
+        }
+        updateErrorMessage(field, errorMessage);
+    }
+
+    return isValid;
 }
 
 // Function to check if passwords match
 function checkPasswordsMatch() {
+    // Only validate if the field has been touched or is being submitted
+    if (!touchedFields.has(confirmPasswordInput) && !form.classList.contains('was-validated')) {
+        confirmPasswordInput.classList.remove('is-invalid');
+        confirmPasswordInput.classList.remove('is-valid');
+        return false;
+    }
+
     if (passwordInput.value === '' || confirmPasswordInput.value === '') {
-        confirmPasswordInput.classList.remove('valid');
-        confirmPasswordInput.classList.remove('invalid');
+        confirmPasswordInput.classList.remove('is-valid');
+        confirmPasswordInput.classList.add('is-invalid');
+        updateErrorMessage(confirmPasswordInput, 'Please confirm your password.');
         return false;
     }
-    if (passwordInput.value === confirmPasswordInput.value &&
-        passwordInput.value !== '' &&
-        patterns.password.test(passwordInput.value)) {
-        confirmPasswordInput.classList.remove('invalid');
-        confirmPasswordInput.classList.add('valid');
-        return true;
-    } else {
-        confirmPasswordInput.classList.remove('valid');
-        confirmPasswordInput.classList.add('invalid');
+
+    if (!patterns.password.test(passwordInput.value)) {
+        confirmPasswordInput.classList.remove('is-valid');
+        confirmPasswordInput.classList.add('is-invalid');
+        updateErrorMessage(confirmPasswordInput, 'Password must be 8-15 characters long and can only contain letters, numbers, and underscores.');
         return false;
     }
+
+    const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
+
+    confirmPasswordInput.classList.toggle('is-invalid', !passwordsMatch);
+    confirmPasswordInput.classList.toggle('is-valid', passwordsMatch);
+
+    if (!passwordsMatch) {
+        updateErrorMessage(confirmPasswordInput, 'Passwords do not match.');
+    }
+
+    return passwordsMatch;
 }
 
 // Function to check if all fields are valid
 function checkAllValid() {
-    const firstName = validate(firstNameInput, patterns.name);
-    const lastName = validate(lastNameInput, patterns.name);
-    const username = validate(usernameInput, patterns.username);
-    const password = validate(passwordInput, patterns.password);
+    const firstName = validate(firstNameInput, patterns.name, 'first name');
+    const lastName = validate(lastNameInput, patterns.name, 'last name');
+    const username = validate(usernameInput, patterns.username, 'username');
+    const password = validate(passwordInput, patterns.password, 'password');
     const passwordsMatch = checkPasswordsMatch();
 
-    const existingButton = document.getElementById('register');
-    if (existingButton) {
-        existingButton.remove();
-    }
-
-    if (firstName && lastName && username && password && passwordsMatch) {
-        // Add button to DOM if all fields are valid
-        formElement.appendChild(createRegisterButton());
-    }
+    return firstName && lastName && username && password && passwordsMatch;
 }
 
 // Event listeners for each input field
 firstNameInput.addEventListener('input', () => {
-    validate(firstNameInput, patterns.name);
+    touchedFields.add(firstNameInput);
+    validate(firstNameInput, patterns.name, 'first name');
     checkAllValid();
 });
 
 lastNameInput.addEventListener('input', () => {
-    validate(lastNameInput, patterns.name);
+    touchedFields.add(lastNameInput);
+    validate(lastNameInput, patterns.name, 'last name');
     checkAllValid();
 });
 
 usernameInput.addEventListener('input', () => {
-    validate(usernameInput, patterns.username);
+    touchedFields.add(usernameInput);
+    validate(usernameInput, patterns.username, 'username');
     checkAllValid();
 });
 
 passwordInput.addEventListener('input', () => {
-    validate(passwordInput, patterns.password);
+    touchedFields.add(passwordInput);
+    validate(passwordInput, patterns.password, 'password');
     checkPasswordsMatch();
     checkAllValid();
 });
 
 confirmPasswordInput.addEventListener('input', () => {
+    touchedFields.add(confirmPasswordInput);
     checkPasswordsMatch();
     checkAllValid();
 });
 
 // Form submission handler
-formElement.addEventListener('submit', (e) => {
-    // Prevents to actually submit the form for now
+form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    if (!checkAllValid()) {
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+    }
+
+    // If all validations pass, you can proceed with form submission
     alert('Account creation in progress');
+    // form.submit(); // Uncomment this when you're ready to actually submit the form
 });
 
 // Add validation icons

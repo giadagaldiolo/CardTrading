@@ -1,80 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>SUPSI Card Online Shop - Card Sale Form</title>
-        <meta name="author" content="Giada Galdiolo">
-        <meta name="date" content="2025-03-11" scheme="YYYY-MM-DD">
-        <meta name="description" content="form to sell a card in the SUPSI card online shop">
-        <meta charset="UTF-8">
-        <meta name="keywords" content="buy, sell, card, shop">
-        <link rel="stylesheet" type="text/css" href="/CSS/common.css"/>
-        <link rel="stylesheet" type="text/css" href="/CSS/cardSaleStyle.css" />
-    </head>
-    <body>
-        <header>
-            <img class="logo" src="/images/newLogo.png" alt="logo">
-            <h1> Card Sale Form </h1>
-        </header>
-        <div th:replace="fragments/navbar :: navbar"></div>
-        <main>
-            <form method="post" th:action="@{/card/new}" th:object="${card}">
-                <fieldset>
-                    <legend>Sell a card</legend>
-                    <div>
-                        <label for="cname">Card name:</label><br>
-                        <input type="text" id="cname" th:field="*{cname}">
+<main th:replace="~{fragments/layout :: layout(
+    pageTitle='Sell a Card - SUPSI card online shop',
+    headerTitle='Sell a Card',
+    pageDescription='Form to sell a card in the SUPSI card online shop',
+    additionalCss=@{'/css/form.css'},
+    pageScripts=null,
+    pageContent=~{:: content}
+)}">
+    <section th:fragment="content" class="container pt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <form th:action="@{/card/new}" th:object="${card}" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="h4 mb-0">Sell a Card</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Card name:</label>
+                                <input type="text" class="form-control" id="name" th:field="*{cname}" required>
+                                <div class="invalid-feedback">Please enter a valid card name.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="author" class="form-label">Author:</label>
+                                <input type="text" class="form-control" id="author" th:field="*{author}" required>
+                                <div class="invalid-feedback">Please enter the author's name.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Date:</label>
+                                <input type="date" class="form-control" id="date" th:field="*{date}" required>
+                                <div class="invalid-feedback">Please select a date.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="condition" class="form-label">Card condition:</label>
+                                <select class="form-select" th:field="*{condition}" id="condition" required>
+                                    <option value="" disabled selected>Select condition</option>
+                                    <option th:each="conditionOpt : ${T(ch.supsi.web.cardgames.model.CardCondition).values()}"
+                                            th:value="${conditionOpt}"
+                                            th:text="${conditionOpt}">Mint</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a condition.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="type" class="form-label">Card Type:</label>
+                                <select class="form-select" th:field="*{cardType}" id="type" required>
+                                    <option value="" disabled selected>Select type</option>
+                                    <option th:each="typeOpt : ${T(ch.supsi.web.cardgames.model.CardType).values()}"
+                                            th:value="${typeOpt}"
+                                            th:text="${typeOpt}">Pokemon</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a card type.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description:</label>
+                                <textarea class="form-control" id="description" th:field="*{description}" rows="3" required></textarea>
+                                <div class="invalid-feedback">Please enter a description.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Image:</label>
+                                <input type="file" class="form-control" id="image" name="imageFile" accept="image/*" required>
+                                <div class="invalid-feedback">Please select an image.</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
                     </div>
-                    <div>
-                        <label for="author">Author:</label><br>
-                        <input type="text" id="author" th:field="*{author}">
-                    </div>
-                    <div>
-                        <label for="date">Date:</label><br>
-                        <input type="date" id="date" th:field="*{date}">
-                    </div>
-                    <div>
-                        <label for="condition">Condition</label>
-                        <select id="condition" th:field="*{condition}">
-                            <option value="">Select Condition</option>
-                            <option value="MINT">Mint</option>
-                            <option value="NEAR_MINT">Near Mint</option>
-                            <option value="EXCELLENT">Excellent</option>
-                            <option value="GOOD">Good</option>
-                            <option value="LIGHT_PLAYED">Light Played</option>
-                            <option value="PLAYED">Played</option>
-                            <option value="POOR">Poor</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="description">Descriptive text:</label>
-                        <textarea id="description" th:field="*{description}"></textarea>
-                    </div>
-                    <div>
-                        <label for="image">Select the card image:</label>
-                        <input type ="file" id="image" name="image">
-                    </div>
-                </fieldset>
-                <input type="submit" value="Create">
-            </form>
-        </main>
-        <aside>
-            <h2>News</h2>
-            <ul>
-                <li class="news">
-                    #PP3 | Added register form with JS validation
-                </li>
-                <li class="news">
-                    #PP2 | New version of the platform with CSS
-                </li>
-                <li class="news">
-                    #PP1 | First version online!
-                </li>
-            </ul>
-        </aside>
-        <footer>
-            <hr>
-            <small> SUPSI card online shop - Copyleft CC-by <time datetime="2025">2025</time> by Giada </small>
-            <hr>
-        </footer>
-    </body>
-</html>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>

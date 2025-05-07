@@ -1,0 +1,57 @@
+.not-found-section {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-image {
+    margin-bottom: 30px;
+}
+
+.not-found-image img {
+    max-width: 200px;
+    height: auto;
+}
+
+.not-found-message h3 {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.not-found-message p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.not-found-message ul {
+    text-align: left;
+    display: inline-block;
+    margin: 15px 0;
+}
+
+.not-found-message ul li {
+    margin-bottom: 10px;
+}
+
+.not-found-message a {
+    color: lightpink;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.not-found-message a:hover {
+    text-decoration: underline;
+}

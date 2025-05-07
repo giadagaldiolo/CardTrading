@@ -1,18 +1,4 @@
 
-body {
-    min-height: 100vh;
-    background-color: #ffe4e1;
-    font-family: Arial, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 130px 80px auto auto auto auto auto auto auto 30px;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-
 
 header {
     background-image: url("../images/background.jpg");
@@ -37,94 +23,6 @@ header h1 {
 }
 
 
-.navbar {
-    grid-row: 2/2;
-    grid-column: 1/5;
-    display: flex;
-    align-items: stretch;
-    background-color: #ffb6c1;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px;
-}
-
-.navbar a:hover {
-    color: white;
-}
-
-nav .menuItem{
-    padding: 0px 20px;
-    border-right: 1px solid white;
-    line-height: 80px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 80px;
-    text-wrap: nowrap;
-}
-nav .menuItem.registerBtn {
-    flex-grow: 1;
-    align-items: end;
-    align-content: end;
-    display: flex;
-    flex-direction: row-reverse;
-    border: none;
-    min-width: 40px;
-
-}
-
-.menuItem.registerBtn a{
-    display: inline-block;
-    background-image: url("../images/User_Icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
-    background-position: center;
-    padding: 0px 20px;
-}
-
-main {
-    grid-row: 3/10;
-    grid-column: 1/4;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding:20px;
-}
-
-main h2 {
-    color: #444;
-    margin: 20px 0;
-    font-size: 24px;
-}
-
-aside {
-    grid-row: 3/10;
-    grid-column: 4/4;
-    border-left:1px solid white;
-    padding: 20px;
-}
-
-aside h2 {
-    color: #444;
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-
-
-
-
-
-
-
-
-
-------------------
 html {
     height: 100%;
     width: 100%;
@@ -147,7 +45,7 @@ html {
 
 .announcementsList li {
     border-radius: 20px;
-    background-color: #719fb8;
+    background-color: lightpink;
     color: black;
 }
 

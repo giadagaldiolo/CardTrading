@@ -1,8 +1,7 @@
 package ch.supsi.web.cardgames.Controller;
 
 import org.springframework.ui.Model;
-import ch.supsi.web.cardgames.Model.Card;
-import ch.supsi.web.cardgames.Model.CardType;
+import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.Service.CardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +11,7 @@ import java.io.IOException;
 import java.text.ParseException;
 
 @Controller
+@RequestMapping("/card")
 public class ThymeLeafCardController {
 
     private final CardService cardService;
@@ -26,23 +26,23 @@ public class ThymeLeafCardController {
     }
 
 
-    @GetMapping("/card/new")
+    @GetMapping("/new")
     public String newCardForm(Model model) {
         model.addAttribute("card", new Card());
         return "cardSaleForm";
     }
 
-    @PostMapping("/card/new")
+    @PostMapping("/new")
     public String createCard(@ModelAttribute Card card,
-                             @RequestParam("image") MultipartFile imageFile) throws IOException, ParseException {
+                             @RequestParam("imageFile") MultipartFile imageFile) throws IOException, ParseException {
         if (!imageFile.isEmpty()) {
             card.setImage(imageFile.getBytes());
         }
-        cardService.saveCard(card);
+        this.cardService.saveCard(card);
         return "redirect:/";
     }
 
-    @GetMapping("{cardId}")
+    @GetMapping("/{cardId}")
     public String cardDetail(@PathVariable int cardId, Model model) {
         Card card = cardService.getCardById(cardId);
         if(card == null){

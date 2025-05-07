@@ -1,6 +1,6 @@
-package ch.supsi.web.cardgames.Model;
+package ch.supsi.web.cardgames.model;
 
-public enum Condition {
+public enum CardCondition {
     MINT,
     NEAR_MINT,
     EXCELLENT,

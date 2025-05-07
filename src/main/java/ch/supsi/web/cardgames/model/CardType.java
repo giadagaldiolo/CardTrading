@@ -1,4 +1,4 @@
-package ch.supsi.web.cardgames.Model;
+package ch.supsi.web.cardgames.model;
 
 public enum CardType {
     POKEMON,

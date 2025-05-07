@@ -43,7 +43,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="type" class="form-label">Card Type:</label>
-                                <select class="form-select" th:field="*{type}" id="type" required>
+                                <select class="form-select" th:field="*{cardType}" id="type" required>
                                     <option value="" disabled>Select type</option>
                                     <option th:each="typeOpt : ${T(ch.supsi.web.cardgames.model.CardType).values()}"
                                             th:value="${typeOpt}"

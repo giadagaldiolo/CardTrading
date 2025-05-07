@@ -1,6 +1,6 @@
 package ch.supsi.web.cardgames.Controller;
 
-import ch.supsi.web.cardgames.Model.Card;
+import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.Service.CardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

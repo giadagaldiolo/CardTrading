@@ -43,7 +43,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="type" class="form-label">Card Type:</label>
-                                <select class="form-select" th:field="*{type}" id="type" required>
+                                <select class="form-select" th:field="*{cardType}" id="type" required>
                                     <option value="" disabled selected>Select type</option>
                                     <option th:each="typeOpt : ${T(ch.supsi.web.cardgames.model.CardType).values()}"
                                             th:value="${typeOpt}"
@@ -58,7 +58,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="image" class="form-label">Image:</label>
-                                <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                                <input type="file" class="form-control" id="image" name="imageFile" accept="image/*" required>
                                 <div class="invalid-feedback">Please select an image.</div>
                             </div>
                         </div>

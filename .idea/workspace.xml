@@ -5,11 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/ThymeLeafCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Controller/ThymeLeafCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/CardType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/CardType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Model/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/CardCondition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/Service/CardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mobileNews.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mobileNews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/ThymeLeafCardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/ThymeLeafCardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/CardType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/CardType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/Condition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/CardService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/RegistrationFormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/RegistrationFormStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/detailsStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/indexStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cardEditForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cardEditForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userRegistrationForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,20 +55,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Documents/Giada/Quarto_semestre/DataPersistence/jpa-tutorial&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.CardgamesApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/giada/Documents/Giada/Quarto_semestre/DataPersistence/jpa-tutorial",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="CardgamesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -70,7 +102,7 @@
       <updated>1745926452680</updated>
       <workItem from="1745926456267" duration="1266000" />
       <workItem from="1746520968275" duration="2233000" />
-      <workItem from="1746610301457" duration="5111000" />
+      <workItem from="1746610301457" duration="8188000" />
     </task>
     <servers />
   </component>

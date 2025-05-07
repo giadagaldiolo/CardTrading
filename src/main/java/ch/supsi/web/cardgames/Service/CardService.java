@@ -1,12 +1,11 @@
 package ch.supsi.web.cardgames.Service;
 
-import ch.supsi.web.cardgames.Model.Card;
-import ch.supsi.web.cardgames.Model.CardType;
-import ch.supsi.web.cardgames.Model.Condition;
+import ch.supsi.web.cardgames.model.Card;
+import ch.supsi.web.cardgames.model.CardType;
+import ch.supsi.web.cardgames.model.CardCondition;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ResourceUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -32,9 +31,9 @@ public class CardService {
     public void init() {
         if(cards.isEmpty()) {
             try {
-                cards.add(new Card(UUID.randomUUID().hashCode(), "Pikachu", "Pikachu description", new Date(), "Ash", Condition.MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(ResourceUtils.getFile("classpath:static/images/pikachu.jpg").toURI()))));
-                cards.add(new Card(UUID.randomUUID().hashCode(), "Bulbasaur", "Bulbasaur description", new Date(), "Ash", Condition.NEAR_MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(ResourceUtils.getFile("classpath:static/images/Bulbasaur.png").toURI()))));
-                cards.add(new Card(UUID.randomUUID().hashCode(), "Charmander", "Charmander description", new Date(), "Ash", Condition.MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(ResourceUtils.getFile("classpath:static/images/Charmander.jpg").toURI()))));
+                cards.add(new Card(UUID.randomUUID().hashCode(), "Pikachu", "Pikachu description", new Date(), "Ash", CardCondition.MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(uploadPath, "pikachu.jpg"))));
+                cards.add(new Card(UUID.randomUUID().hashCode(), "Bulbasaur", "Bulbasaur description", new Date(), "Ash", CardCondition.NEAR_MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(uploadPath, "Bulbasaur.png"))));
+                cards.add(new Card(UUID.randomUUID().hashCode(), "Charmander", "Charmander description", new Date(), "Ash", CardCondition.MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(uploadPath, "Charmander.jpg"))));
             } catch (IOException e) {
                 throw new RuntimeException("Failed to load initial card images", e);
             }
@@ -42,7 +41,6 @@ public class CardService {
     }
 
     public List<Card> getCards() {
-        System.out.println("Fetching cards: " + cards);
         return cards;
     }
 
@@ -54,7 +52,6 @@ public class CardService {
     }
 
     public void saveCard(Card card) {
-        System.out.println("Saving card: " + card.getCname());
         cards.add(card);
     }
 

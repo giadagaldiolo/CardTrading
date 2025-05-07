@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<body>
-<nav class="navbar" th:fragment="navbar">
-    <a class="menuItem" th:href="@{/}">Home</a>
-    <a class="menuItem" th:href="@{/card/new}">Card sale form</a>
-    <div class="menuItem registerBtn">
-        <a th:href="@{/register}">Register</a>
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="btn btn-outline-light d-flex align-items-center order-lg-last ms-2" th:href="@{/register}">
+            <img th:src="@{/images/user.png}" alt="Register" class="me-2" style="height: 20px; width: 20px;">
+            <span>Register</span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" th:href="@{/card/new}">Card sale form</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link text-white" th:href="@{/news}">News</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <a class="btn btn-light" th:href="@{/register}">Register</a>
+            </div>
+        </div>
     </div>
 </nav>
-</body>
-</html>
