@@ -1,10 +1,3 @@
-html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 
 body {
     min-height: 100vh;
@@ -19,11 +12,7 @@ body {
     width: 100%;
 }
 
-.logo {
-    margin-top: -30px;
-    width: 450px;
-    height: 200px;
-}
+
 
 header {
     background-image: url("../images/background.jpg");
@@ -127,16 +116,45 @@ aside h2 {
 }
 
 
-aside ul {
-    list-style-type: none;
+
+
+
+
+
+
+
+
+------------------
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
     padding: 0;
 }
 
-
-.news {
-    padding: 10px;
-    border-bottom: 1px dashed white;
+.logo {
+    margin-top: -30px;
+    width: 450px;
+    height: 200px;
 }
+
+.announcementsList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.announcementsList li {
+    border-radius: 20px;
+    background-color: #719fb8;
+    color: black;
+}
+
+nav li:hover {
+    font-weight: bold;
+}
+
 
 
 footer {
@@ -151,4 +169,17 @@ footer {
 
 footer small {
     font-size: 15px;
+}
+
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+.news {
+    padding: 10px;
+    border-bottom: 1px dashed white;
 }

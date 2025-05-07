@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/cardNotFound.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/RegistrationFormStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/RegistrationFormStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +69,7 @@
       <updated>1745926452680</updated>
       <workItem from="1745926456267" duration="1266000" />
       <workItem from="1746520968275" duration="2233000" />
-      <workItem from="1746610301457" duration="2304000" />
+      <workItem from="1746610301457" duration="3376000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,138 @@
+/* Card Container */
+.trading-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.trading-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-body img {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    min-height: 50px;
+}
+
+.card-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-type {
+    font-size: 12px;
+    background-color: #f0f0f0;
+    padding: 3px 8px;
+    border-radius: 12px;
+    color: #555;
+}
+
+/* Card Content */
+.card-description {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    flex-grow: 1;
+    max-height: 60px;
+    height: 52px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.2;
+}
+
+/* Card Footer */
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    font-size: 12px;
+    color: #777;
+    background-color: transparent;
+    border-top: none;
+    padding: 5px 0;
+    height: 100%;
+}
+
+
+.card-date {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+}
+
+/* Condition Colors */
+.condition-mint {
+    background-color: #4CAF50;
+}
+
+.condition-near-mint {
+    background-color: #8BC34A;
+}
+
+.condition-excellent {
+    background-color: #2196F3;
+}
+
+.condition-good {
+    background-color: #FFC107;
+}
+
+.condition-played {
+    background-color: #FF9800;
+}
+
+.condition-poor {
+    background-color: #F44336;
+}
+
+/* Card Grid Layout */
+.cards-container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* To avoid underline of text*/
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
