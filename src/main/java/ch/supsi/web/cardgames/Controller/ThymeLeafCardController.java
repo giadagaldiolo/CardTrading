@@ -5,9 +5,11 @@ import ch.supsi.web.cardgames.Model.Card;
 import ch.supsi.web.cardgames.Model.CardType;
 import ch.supsi.web.cardgames.Service.CardService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.text.ParseException;
 
 @Controller
 public class ThymeLeafCardController {
@@ -20,26 +22,29 @@ public class ThymeLeafCardController {
 
     @GetMapping("/not-found")
     public String getCardNotFoundPage(){
-        return "card-not-found";
+        return "cardNotFound";
     }
 
 
     @GetMapping("/card/new")
     public String newCardForm(Model model) {
         model.addAttribute("card", new Card());
-        model.addAttribute("cardTypes", CardType.values());
         return "cardSaleForm";
     }
 
     @PostMapping("/card/new")
-    public String createCard(Card card) {
+    public String createCard(@ModelAttribute Card card,
+                             @RequestParam("image") MultipartFile imageFile) throws IOException, ParseException {
+        if (!imageFile.isEmpty()) {
+            card.setImage(imageFile.getBytes());
+        }
         cardService.saveCard(card);
         return "redirect:/";
     }
 
-    @GetMapping("/card/{id}")
-    public String cardDetail(@PathVariable int id, Model model) {
-        Card card = cardService.getCardById(id);
+    @GetMapping("{cardId}")
+    public String cardDetail(@PathVariable int cardId, Model model) {
+        Card card = cardService.getCardById(cardId);
         if(card == null){
             return "redirect:/card/not-found";
         }
@@ -47,9 +52,9 @@ public class ThymeLeafCardController {
         return "details";
     }
 
-    @GetMapping("/card/{id}/edit")
-    public String editCardForm(@PathVariable int id, Model model) {
-        Card card = cardService.getCardById(id);
+    @GetMapping("/{cardId}/edit")
+    public String editCardForm(@PathVariable int cardId, Model model) {
+        Card card = cardService.getCardById(cardId);
         if(card == null){
             return "redirect:/cards/not-found";
         }
@@ -57,19 +62,25 @@ public class ThymeLeafCardController {
         return "cardEditForm";
     }
 
-    @PostMapping("/card/{id}/edit")
-    public String updateCard(@PathVariable int id, Card card) {
-        Card existingCard = cardService.getCardById(id);
-        if(existingCard == null){
+    @PostMapping("/{cardId}/edit")
+    public String updateCard(@PathVariable int cardId,@ModelAttribute Card card,
+                             @RequestParam("image") MultipartFile imageFile) throws IOException, ParseException {
+        Card existingCard = cardService.getCardById(cardId);
+        if (existingCard == null) {
             return "redirect:/card/not-found";
         }
-        cardService.updateCard(card, existingCard);
-        return "redirect:/card/" + id;
+        if (!imageFile.isEmpty()) {
+            card.setImage(imageFile.getBytes());
+        } else {
+            card.setImage(existingCard.getImage());
+        }
+        this.cardService.updateCard(card, existingCard);
+        return "redirect:/card/" + cardId;
     }
 
-    @GetMapping("/card/{id}/delete")
-    public String deleteCard(@PathVariable int id) {
-        Card card = cardService.getCardById(id);
+    @GetMapping("/{cardId}/delete")
+    public String deleteCard(@PathVariable int cardId) {
+        Card card = cardService.getCardById(cardId);
         if(card == null){
             return "redirect:/card/not-found";
         }

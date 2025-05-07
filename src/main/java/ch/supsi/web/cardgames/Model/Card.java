@@ -16,6 +16,13 @@ public class Card {
     private String author;
     private Condition condition;
     private CardType cardType;
-    private String image;
+    private byte[] image;
+
+    public String getBase64Image() {
+        if (image == null) {
+            return "";
+        }
+        return "data:image/jpeg;base64," + java.util.Base64.getEncoder().encodeToString(image);
+    }
 
 }

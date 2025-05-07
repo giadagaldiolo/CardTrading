@@ -6,6 +6,7 @@ import ch.supsi.web.cardgames.Model.Condition;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -29,10 +30,14 @@ public class CardService {
 
     @PostConstruct
     public void init() {
-        if(cards.isEmpty()){
-            cards.add(new Card(UUID.randomUUID().hashCode(),"Pikachu", "Pikachu description", new Date(), "Ash", Condition.MINT, CardType.POKEMON, "/images/pikachu.jpg"));
-            cards.add(new Card(UUID.randomUUID().hashCode(),"Bulbasaur", "Bulbasaur description", new Date(), "Ash",Condition.NEAR_MINT, CardType.POKEMON, "/images/Bulbasaur.png"));
-            cards.add(new Card(UUID.randomUUID().hashCode(),"Charmander", "Charmander description", new Date(), "Ash",Condition.MINT, CardType.POKEMON, "/images/Charmander.jpg" ));
+        if(cards.isEmpty()) {
+            try {
+                cards.add(new Card(UUID.randomUUID().hashCode(), "Pikachu", "Pikachu description", new Date(), "Ash", Condition.MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(ResourceUtils.getFile("classpath:static/images/pikachu.jpg").toURI()))));
+                cards.add(new Card(UUID.randomUUID().hashCode(), "Bulbasaur", "Bulbasaur description", new Date(), "Ash", Condition.NEAR_MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(ResourceUtils.getFile("classpath:static/images/Bulbasaur.png").toURI()))));
+                cards.add(new Card(UUID.randomUUID().hashCode(), "Charmander", "Charmander description", new Date(), "Ash", Condition.MINT, CardType.POKEMON, Files.readAllBytes(Paths.get(ResourceUtils.getFile("classpath:static/images/Charmander.jpg").toURI()))));
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to load initial card images", e);
+            }
         }
     }
 
@@ -50,7 +55,6 @@ public class CardService {
 
     public void saveCard(Card card) {
         System.out.println("Saving card: " + card.getCname());
-        card.setImage("/images/Charmander.jng");
         cards.add(card);
     }
 
