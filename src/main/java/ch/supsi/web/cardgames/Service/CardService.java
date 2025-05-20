@@ -4,6 +4,7 @@ import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.model.CardType;
 import ch.supsi.web.cardgames.model.CardCondition;
 import jakarta.annotation.PostConstruct;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,6 +22,7 @@ import java.util.UUID;
 @Service
 public class CardService {
 
+    @Getter
     private final List<Card> cards = new ArrayList<>();
 
 
@@ -38,10 +40,6 @@ public class CardService {
                 throw new RuntimeException("Failed to load initial card images", e);
             }
         }
-    }
-
-    public List<Card> getCards() {
-        return cards;
     }
 
     public Card getCardById(int id) {
