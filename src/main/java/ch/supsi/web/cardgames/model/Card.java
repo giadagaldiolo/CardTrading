@@ -12,7 +12,7 @@ public class Card {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private String author;
-    private CardCondition condition;
+    private CardCondition cardCondition;
     private CardType cardType;
     private byte[] image;
 

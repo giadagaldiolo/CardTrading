@@ -33,7 +33,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="condition" class="form-label">Card condition:</label>
-                                <select class="form-select" th:field="*{condition}" id="condition" required>
+                                <select class="form-select" th:field="*{cardCondition}" id="condition" required>
                                     <option value="" disabled selected>Select condition</option>
                                     <option th:each="conditionOpt : ${T(ch.supsi.web.cardgames.model.CardCondition).values()}"
                                             th:value="${conditionOpt}"

@@ -9,8 +9,8 @@
         <div class="card-body-badge d-flex justify-content-center align-items-center gap-2 mt-3">
             <span class="badge bg-secondary card-type" th:text="${card.cardType}">Type</span>
             <span class="badge card-condition"
-                  th:classappend="${'condition-' + #strings.toLowerCase(#strings.replace(card.condition, '_', '-'))}"
-                  th:text="${card.condition}">Condition</span>
+                  th:classappend="${'condition-' + #strings.toLowerCase(#strings.replace(card.cardCondition, '_', '-'))}"
+                  th:text="${card.cardCondition}">Condition</span>
         </div>
     </div>
     <div class="card-footer">

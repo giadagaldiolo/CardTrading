@@ -64,7 +64,7 @@ public class CardService {
                     card.setDescription(newCard.getDescription());
                     card.setDate(newCard.getDate());
                     card.setAuthor(newCard.getAuthor());
-                    card.setCondition(newCard.getCondition());
+                    card.setCardCondition(newCard.getCardCondition());
                     card.setCardType(newCard.getCardType());
                 });
     }
