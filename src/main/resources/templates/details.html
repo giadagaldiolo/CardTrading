@@ -6,7 +6,7 @@
     additionalCss=null,
     pageScripts=null,
     pageContent=~{:: content}
-)}">
+)}" xmlns:sec="http://www.w3.org/1999/xhtml">
     <section th:fragment="content" class="container py-4">
         <h2 class="mb-4" th:text="${card.cname}">Card 1</h2>
         <div class="card">
@@ -14,7 +14,7 @@
                 <div th:text="'Seller: ' + ${card.ownerUser.username} + ' | Announcement date: '+ ${card.date}">
                     Seller: Tommaso | Announcement date: <time datetime="2025-03-03">03/03/2025</time>
                 </div>
-                <div>
+                <div sec:authorize="hasRole('ROLE_ADMIN')">
                     <a class="btn btn-primary me-2" th:href="@{'/card/'+${card.id}+'/edit'}">Edit</a>
                     <a class="btn btn-danger" th:href="@{'/card/'+${card.id}+'/delete'}">Delete</a>
                 </div>

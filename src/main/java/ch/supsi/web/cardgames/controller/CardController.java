@@ -2,6 +2,7 @@ package ch.supsi.web.cardgames.controller;
 
 import ch.supsi.web.cardgames.model.User;
 import ch.supsi.web.cardgames.service.UserService;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.service.CardService;
@@ -43,8 +44,9 @@ public class CardController {
         if (!imageFile.isEmpty()) {
             card.setImage(imageFile.getBytes());
         }
-        List<User> users = this.userService.getAllUsers();
-        card.setOwnerUser(users.get(1));
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User loggedUser = this.userService.findUserByUsername(user.getUsername());
+        card.setOwnerUser(loggedUser);
 
         this.cardService.saveCard(card);
         return "redirect:/";

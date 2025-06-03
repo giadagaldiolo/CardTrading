@@ -10,22 +10,22 @@
     <section th:fragment="content" class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" novalidate method="post" th:action="@{/register}">
                     <div class="card">
                         <div class="card-header">
                             <h2 class="h4 mb-0">Register</h2>
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label for="first-name" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Insert your first name" required>
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Insert your first name" required>
                                 <div class="invalid-feedback">
                                     Please enter your first name using only letters.
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="last-name" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Insert your last name" required>
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Insert your last name" required>
                                 <div class="invalid-feedback">
                                     Please enter your last name using only letters.
                                 </div>
@@ -51,6 +51,9 @@
                                     Passwords do not match or do not meet the requirements.
                                 </div>
                             </div>
+                            <div th:if="${errorMessage}" class="alert alert-danger">
+                                <p th:text="${errorMessage}"></p>
+                            </div>
                         </div>
                         <div class="card-footer">
                             <button type="submit" class="btn btn-outline-dark custom-hover" style="background-color: lightpink">Register</button>
@@ -60,6 +63,7 @@
             </div>
         </div>
     </section>
+
 
     <th:block th:fragment="scripts">
         <script th:src="@{/scripts/validation.js}"></script>

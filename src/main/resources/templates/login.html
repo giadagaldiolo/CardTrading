@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<main th:replace="~{fragments/layout :: layout(
+    pageTitle='Login - SUPSI card online shop',
+    headerTitle=${headerTitle},
+    pageDescription='Login',
+    additionalCss=null,
+    pageScripts=~{:: scripts},
+    pageContent=~{:: content}
+)}">
+    <div class="flex-grow-1 overflow-hidden">
+        <div class="container-fluid h-100 row">
+            <main class="d-grid p-4 h-100 overflow-auto">
+                <section th:fragment="content" class="d-grid">
+                    <div class="row justify-content-center align-content-center">
+                        <div class="col-xxl-4 col-xl-4 col- col-md-8 col-lg-6">
+                            <form class="needs-validation" novalidate th:action="@{/login}" method="post">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h2 class="h4 mb-0">Login</h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="username" class="form-label">Username</label>
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="Insert username" required>
+                                            <div class="invalid-feedback">
+                                                Username can only contain letters, numbers, and underscores.
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Insert password" required>
+                                            <div class="invalid-feedback">
+                                                Password must be 8-15 characters long and can only contain letters, numbers, and underscores.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-outline-dark custom-hover" style="background-color: lightpink">Login</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="mt-4 d-flex justify-content-center">
+                                <div>
+                                    No account yet? Sign up <a th:href="@{/register}">here</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</main>

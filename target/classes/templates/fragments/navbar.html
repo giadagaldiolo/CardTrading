@@ -1,12 +1,8 @@
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark" style="background-color: lightpink;" >
+<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark" style="background-color: lightpink"  xmlns:sec="http://www.w3.org/1999/xhtml" >
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="btn btn-outline-dark custom-hover d-flex align-items-center order-lg-last ms-2" th:href="@{/register}">
-            <img th:src="@{/images/User_Icon.png}" alt="Register" class="me-2" style="height: 20px; width: 20px;">
-            <span>Register</span>
-        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
@@ -15,7 +11,33 @@
                 <li class="nav-item">
                     <a class="nav-link text-black" th:href="@{/card/new}">Card sale form</a>
                 </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link text-white" th:href="@{/news}">News</a>
+                </li>
             </ul>
         </div>
+
+        <div sec:authorize="isAuthenticated()" class="d-flex align-items-center">
+            <span class="text-dark">
+                Logged in as:
+                <span class="py-1" sec:authentication="name"></span>
+            </span>
+            <a  class="btn btn-outline-dark custom-hover d-flex align-items-center order-lg-last ms-2" th:href="@{/logout}">
+                <i class="bi bi-box-arrow-right"></i>
+                <span class="mx-2">Logout</span>
+            </a>
+        </div>
+        <span sec:authorize="isAuthenticated()==false">
+            <a class="btn btn-outline-dark custom-hover d-flex align-items-center order-lg-last ms-2" th:href="@{/register}">
+                <i class="bi bi-person-circle"></i>
+                <span class="mx-2">Register</span>
+            </a>
+        </span>
+        <span sec:authorize="isAuthenticated()==false">
+            <a class="btn btn-outline-dark custom-hover d-flex align-items-center order-lg-last ms-2" th:href="@{/login}">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span class="mx-2">Login</span>
+            </a>
+        </span>
     </div>
 </nav>

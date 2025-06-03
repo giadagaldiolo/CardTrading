@@ -31,12 +31,15 @@ public class CardService {
     public List<Card> getCards() {
         return cardRepository.findAll();
     }
+
     public Card getCardById(int id){
         return cardRepository.findById(id).orElse(null);
     }
+
     public void saveCard(Card card) {
         cardRepository.save(card);
     }
+
     public void updateCard(Card newCard,Card oldCard){
         oldCard.setCname(newCard.getCname());
         oldCard.setDescription(newCard.getDescription());
@@ -47,8 +50,13 @@ public class CardService {
         oldCard.setImage(newCard.getImage());
         cardRepository.save(oldCard);
     }
+
     public void deleteCard(Card card){
         cardRepository.deleteById(card.getId());
+    }
+
+    public int getNumberOfCards(){
+        return (int) cardRepository.count();
     }
 
 

@@ -1,8 +1,6 @@
 package ch.supsi.web.cardgames.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
@@ -17,12 +15,19 @@ public class User {
 
     private String firstName;
 
-    private String lastname;
+    private String lastName;
+
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
+
+    private String password;
 
 
-    public User(String username, String firstName, String lastname) {
+    public User(String username, String firstName, String lastName, UserRole role, String password) {
         this.username = username;
         this.firstName = firstName;
-        this.lastname = lastname;
+        this.lastName = lastName;
+        this.role = role;
+        this.password = password;
     }
 }
