@@ -10,7 +10,8 @@
             <span class="badge bg-secondary card-type" th:text="${card.cardType}">Type</span>
             <span class="badge card-condition"
                   th:classappend="${'condition-' + #strings.toLowerCase(#strings.replace(card.cardCondition, '_', '-'))}"
-                  th:text="${card.cardCondition}">Condition</span>
+                  th:text="${#strings.toLowerCase(#strings.replace(card.cardCondition, '_', '-'))}">
+            </span>
         </div>
     </div>
     <div class="card-footer">

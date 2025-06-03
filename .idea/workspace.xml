@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="" />
+    <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/card.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +86,17 @@
       <workItem from="1746520968275" duration="2233000" />
       <workItem from="1746610301457" duration="8188000" />
       <workItem from="1747726796368" duration="383000" />
+      <workItem from="1747815341974" duration="1048000" />
+      <workItem from="1747941115623" duration="10000" />
+      <workItem from="1747990369947" duration="4236000" />
+      <workItem from="1748093050716" duration="794000" />
+      <workItem from="1748180999782" duration="6757000" />
+      <workItem from="1748199798096" duration="122000" />
+      <workItem from="1748200002955" duration="948000" />
+      <workItem from="1748240667791" duration="915000" />
+      <workItem from="1748262425389" duration="807000" />
+      <workItem from="1748445021241" duration="12000" />
+      <workItem from="1748932292103" duration="5462000" />
     </task>
     <servers />
   </component>
