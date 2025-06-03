@@ -1,7 +1,7 @@
-package ch.supsi.web.cardgames.Controller;
+package ch.supsi.web.cardgames.controller;
 
 import ch.supsi.web.cardgames.model.Card;
-import ch.supsi.web.cardgames.Service.CardService;
+import ch.supsi.web.cardgames.service.CardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

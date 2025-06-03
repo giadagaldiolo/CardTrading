@@ -1,23 +1,28 @@
-package ch.supsi.web.cardgames.Controller;
+package ch.supsi.web.cardgames.controller;
 
+import ch.supsi.web.cardgames.model.User;
+import ch.supsi.web.cardgames.service.UserService;
 import org.springframework.ui.Model;
 import ch.supsi.web.cardgames.model.Card;
-import ch.supsi.web.cardgames.Service.CardService;
+import ch.supsi.web.cardgames.service.CardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/card")
-public class ThymeLeafCardController {
+public class CardController {
 
     private final CardService cardService;
+    private final UserService userService;
 
-    public ThymeLeafCardController(CardService cardService) {
+    public CardController(CardService cardService, UserService userService) {
         this.cardService = cardService;
+        this.userService = userService;
     }
 
     @GetMapping("/not-found")
@@ -38,6 +43,9 @@ public class ThymeLeafCardController {
         if (!imageFile.isEmpty()) {
             card.setImage(imageFile.getBytes());
         }
+        List<User> users = this.userService.getAllUsers();
+        card.setOwnerUser(users.get(1));
+
         this.cardService.saveCard(card);
         return "redirect:/";
     }

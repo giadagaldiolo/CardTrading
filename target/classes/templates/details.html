@@ -11,7 +11,7 @@
         <h2 class="mb-4" th:text="${card.cname}">Card 1</h2>
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <div th:text="'Seller: ' + ${card.author} + ' | Announcement date: '+ ${card.date}">
+                <div th:text="'Seller: ' + ${card.ownerUser.username} + ' | Announcement date: '+ ${card.date}">
                     Seller: Tommaso | Announcement date: <time datetime="2025-03-03">03/03/2025</time>
                 </div>
                 <div>
