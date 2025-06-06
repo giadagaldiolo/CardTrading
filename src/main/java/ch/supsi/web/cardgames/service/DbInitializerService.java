@@ -31,10 +31,10 @@ public class DbInitializerService {
         this.userService = userService;
     }
 
-    //https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/stereotype/Service.html
-    //https://docs.spring.io/spring-framework/reference/core/beans/annotation-config/postconstruct-and-predestroy-annotations.html
+
     @PostConstruct
     public void init() {
+        System.out.println("Upload path: " + uploadPath);
         List<User> users = null;
         try {
             users = initUsers();
@@ -42,7 +42,6 @@ public class DbInitializerService {
             throw new RuntimeException(e);
         }
         initCards(users);
-        System.out.println("Upload path: " + uploadPath);
     }
 
     private List<User> initUsers()throws BadRequestException {
