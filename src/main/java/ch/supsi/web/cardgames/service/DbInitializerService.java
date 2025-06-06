@@ -42,6 +42,7 @@ public class DbInitializerService {
             throw new RuntimeException(e);
         }
         initCards(users);
+        System.out.println("Upload path: " + uploadPath);
     }
 
     private List<User> initUsers()throws BadRequestException {
