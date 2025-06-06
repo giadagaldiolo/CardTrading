@@ -5,40 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/security/CustomUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/CardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/DbInitializerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/DbInitializerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/User_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/CardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/CardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/DbInitializerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/DbInitializerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/CSS/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/images/User_Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/news.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +92,9 @@
       <workItem from="1748262425389" duration="807000" />
       <workItem from="1748445021241" duration="12000" />
       <workItem from="1748932292103" duration="9050000" />
-      <workItem from="1748947679937" duration="8551000" />
+      <workItem from="1748947679937" duration="8740000" />
+      <workItem from="1749124039547" duration="252000" />
+      <workItem from="1749195851531" duration="687000" />
     </task>
     <servers />
   </component>
