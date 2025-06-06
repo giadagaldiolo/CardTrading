@@ -34,12 +34,12 @@ public class DbInitializerService {
 
     @PostConstruct
     public void init() {
-        System.out.println("Upload path: " + uploadPath);
         List<User> users = null;
         try {
+            System.out.println("Upload path: " + uploadPath);
             users = initUsers();
-        } catch (BadRequestException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         initCards(users);
     }
