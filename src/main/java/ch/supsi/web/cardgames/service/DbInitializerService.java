@@ -8,7 +8,9 @@ import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -60,14 +62,23 @@ public class DbInitializerService {
         long count = cardService.getNumberOfCards();
         if(count == 0) {
             try {
-                cardService.saveCard(new Card("Ash", "Bulbasaur", "Bulbasaur description", new Date(), Files.readAllBytes(Paths.get(uploadPath, "Bulbasaur.png")), CardCondition.MINT, CardType.POKEMON, users.get(1)));
-                cardService.saveCard(new Card("Ash","Charmander", "Charmander description", new Date(), Files.readAllBytes(Paths.get(uploadPath, "Charmander.jpg")), CardCondition.NEAR_MINT, CardType.POKEMON, users.get(1)));
-                cardService.saveCard(new Card("Kaiba", "Blue-Eyes White Dragon", "Blue-Eyes White Dragon descriptiobn", new Date(), Files.readAllBytes(Paths.get(uploadPath, "Blue-Eyes-Jet-Dragon.jpg")), CardCondition.MINT, CardType.YU_GI_OH, users.get(2)));
-                cardService.saveCard(new Card("MtG Player", "Swords to Plowshares", "Swords to Plowshares description", new Date(), Files.readAllBytes(Paths.get(uploadPath, "swords-to-plowshares.jpg")), CardCondition.NEAR_MINT, CardType.MAGIC, users.get(2)));
-                cardService.saveCard(new Card("Ash", "Pikachu", "Pikachu description", new Date(), Files.readAllBytes(Paths.get(uploadPath, "pikachu.jpg")), CardCondition.MINT, CardType.POKEMON, users.get(1)));
+                cardService.saveCard(new Card("Ash", "Bulbasaur", "Bulbasaur description", new Date(), readBytesFromResource("/static/images/Bulbasaur.png"), CardCondition.MINT, CardType.POKEMON, users.get(1)));
+                cardService.saveCard(new Card("Ash","Charmander", "Charmander description", new Date(), readBytesFromResource("/static/images/Charmander.jpg"), CardCondition.NEAR_MINT, CardType.POKEMON, users.get(1)));
+                cardService.saveCard(new Card("Kaiba", "Blue-Eyes White Dragon", "Blue-Eyes White Dragon descriptiobn", new Date(), readBytesFromResource("/static/images/Blue-Eyes-Jet-Dragon.jpg"), CardCondition.MINT, CardType.YU_GI_OH, users.get(2)));
+                cardService.saveCard(new Card("MtG Player", "Swords to Plowshares", "Swords to Plowshares description", new Date(), readBytesFromResource("/static/images/swords-to-plowshares.jpg"), CardCondition.NEAR_MINT, CardType.MAGIC, users.get(2)));
+                cardService.saveCard(new Card("Ash", "Pikachu", "Pikachu description", new Date(), readBytesFromResource("/static/images/pikachu.jpg"), CardCondition.MINT, CardType.POKEMON, users.get(1)));
             } catch (IOException e) {
                 throw new RuntimeException("Failed to load initial card images", e);
             }
+        }
+    }
+
+    private byte[] readBytesFromResource(String resourcePath) throws IOException {
+        try (InputStream is = getClass().getResourceAsStream(resourcePath)) {
+            if (is == null) {
+                throw new FileNotFoundException("Resource not found: " + resourcePath);
+            }
+            return is.readAllBytes();
         }
     }
 }
