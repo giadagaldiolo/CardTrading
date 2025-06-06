@@ -36,10 +36,9 @@ public class DbInitializerService {
     public void init() {
         List<User> users = null;
         try {
-            System.out.println("Upload path: " + uploadPath);
             users = initUsers();
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (BadRequestException e) {
+            throw new RuntimeException(e);
         }
         initCards(users);
     }

@@ -1,6 +1,6 @@
 package ch.supsi.web.cardgames.controller;
 
-import ch.supsi.web.cardgames.model.User;
+import org.springframework.security.core.userdetails.User;
 import ch.supsi.web.cardgames.service.UserService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
@@ -44,8 +44,8 @@ public class CardController {
         if (!imageFile.isEmpty()) {
             card.setImage(imageFile.getBytes());
         }
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        User loggedUser = this.userService.findUserByUsername(user.getUsername());
+        User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        ch.supsi.web.cardgames.model.User loggedUser = this.userService.findUserByUsername(user.getUsername());
         card.setOwnerUser(loggedUser);
 
         this.cardService.saveCard(card);
@@ -74,7 +74,7 @@ public class CardController {
 
     @PostMapping("/{cardId}/edit")
     public String updateCard(@PathVariable int cardId,@ModelAttribute Card card,
-                             @RequestParam("image") MultipartFile imageFile) throws IOException, ParseException {
+                             @RequestParam("imageFile") MultipartFile imageFile) throws IOException, ParseException {
         Card existingCard = cardService.getCardById(cardId);
         if (existingCard == null) {
             return "redirect:/card/not-found";
