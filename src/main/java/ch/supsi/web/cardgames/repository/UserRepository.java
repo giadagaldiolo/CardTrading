@@ -1,5 +1,6 @@
 package ch.supsi.web.cardgames.repository;
 
+import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

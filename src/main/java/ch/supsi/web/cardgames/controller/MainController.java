@@ -73,4 +73,14 @@ public class MainController {
 
         return "wishlist";
     }
+
+    @GetMapping("/cart")
+    public String cartPage(Model model) {
+        org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        ch.supsi.web.cardgames.model.User loggedUser = userService.findUserByUsername(user.getUsername());
+
+        List<Card> cart = userService.getCart(loggedUser);
+        model.addAttribute("cartCards", cart);
+        return "cart";
+    }
 }

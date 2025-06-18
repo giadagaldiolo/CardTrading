@@ -64,13 +64,16 @@ public class CardController {
         model.addAttribute("card", card);
 
         boolean inWishlist = false;
+        boolean inCart = false;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal instanceof org.springframework.security.core.userdetails.User user) {
             ch.supsi.web.cardgames.model.User loggedUser = this.userService.findUserByUsername(user.getUsername());
             inWishlist = wishlistService.isCardInWishlist(loggedUser, card);
+            inCart = userService.isCardInCart(loggedUser, card);
         }
 
         model.addAttribute("inWishlist", inWishlist);
+        model.addAttribute("inCart", inCart);
         return "details";
     }
 

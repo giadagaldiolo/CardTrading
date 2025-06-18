@@ -1,6 +1,7 @@
 package ch.supsi.web.cardgames.service;
 
 
+import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.model.User;
 import ch.supsi.web.cardgames.model.UserRole;
 import ch.supsi.web.cardgames.repository.UserRepository;
@@ -61,4 +62,23 @@ public class UserService {
             throw new BadRequestException("Username already exists");
         }
     }
+
+    public void addToCart(User user, Card card) {
+        user.getCart().add(card);
+        userRepository.save(user);
+    }
+
+    public void removeFromCart(User user, Card card) {
+        user.getCart().remove(card);
+        userRepository.save(user);
+    }
+
+    public List<Card> getCart(User user) {
+        return user.getCart();
+    }
+
+    public boolean isCardInCart(User user, Card card) {
+        return user.getCart().contains(card);
+    }
+
 }
