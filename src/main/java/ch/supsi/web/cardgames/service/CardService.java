@@ -48,6 +48,7 @@ public class CardService {
         oldCard.setCardCondition(newCard.getCardCondition());
         oldCard.setCardType(newCard.getCardType());         ;
         oldCard.setImage(newCard.getImage());
+        oldCard.setPrice(newCard.getPrice());
         cardRepository.save(oldCard);
     }
 

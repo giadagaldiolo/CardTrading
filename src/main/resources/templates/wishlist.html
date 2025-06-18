@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<main th:replace="~{fragments/layout :: layout(
+    pageTitle='Your Wishlist',
+    headerTitle='Your Wishlist',
+    pageDescription='Cards you have added to your wishlist',
+    additionalCss=null,
+    pageScripts=null,
+    pageContent=~{::content}
+)}">
+    <section th:fragment="content">
+        <h2>Your Wishlist</h2>
+        <div class="cards-container d-flex flex-column flex-md-row flex-wrap justify-content-center justify-content-lg-start align-items-center gap-3">
+            <a th:each="card : ${wishlistCards}" th:href="@{'/card/' + ${card.id}}" class="card-link">
+                <div th:replace="~{fragments/card :: card(${card})}"></div>
+            </a>
+        </div>
+    </section>
+</main>

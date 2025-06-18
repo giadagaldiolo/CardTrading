@@ -12,16 +12,28 @@ public class User {
     @GeneratedValue
     private int id;
 
+    @Column
     private String username;
 
+    @Column
     private String firstName;
 
+    @Column
     private String lastName;
 
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+    @Column
     private String password;
+
+//    @ManyToMany
+//    @JoinTable(
+//            name = "user_wishlist",
+//            joinColumns = @JoinColumn(name = "user_id"),
+//            inverseJoinColumns = @JoinColumn(name = "card_id")
+//    )
+//    private List<Card> wishlist = new ArrayList<>();
 
 
     public User(String username, String firstName, String lastName, UserRole role, String password) {

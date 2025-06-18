@@ -26,6 +26,7 @@ public class WebSecurityConfig {
                         .requestMatchers("/" ).permitAll()
                         .requestMatchers("/login", "/register").permitAll()
                         .requestMatchers("/card/new").authenticated()
+                        .requestMatchers("/wishlist/**").authenticated()
                         .requestMatchers("/card/*/edit").hasRole("ADMIN")
                         .requestMatchers("/card/*/delete").hasRole("ADMIN")
                         .requestMatchers("/card/**").permitAll()

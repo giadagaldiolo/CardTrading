@@ -14,9 +14,24 @@
                 <div th:text="'Seller: ' + ${card.ownerUser.username} + ' | Announcement date: '+ ${card.date}">
                     Seller: Tommaso | Announcement date: <time datetime="2025-03-03">03/03/2025</time>
                 </div>
-                <div sec:authorize="hasRole('ROLE_ADMIN')">
-                    <a class="btn btn-primary me-2" th:href="@{'/card/'+${card.id}+'/edit'}">Edit</a>
-                    <a class="btn btn-danger" th:href="@{'/card/'+${card.id}+'/delete'}">Delete</a>
+                <div class="d-flex align-items-center gap-2">
+                    <div sec:authorize="hasRole('ROLE_ADMIN')">
+                        <a class="btn btn-primary me-2" th:href="@{'/card/'+${card.id}+'/edit'}">Edit</a>
+                        <a class="btn btn-danger" th:href="@{'/card/'+${card.id}+'/delete'}">Delete</a>
+                    </div>
+                    <div sec:authorize="isAuthenticated()">
+                        <form th:if="${inWishlist}" th:action="@{'/wishlist/delete/' + ${card.id}}" method="post" class="m-0 p-0">
+                            <button type="submit" class="btn btn-link p-0 border-0" title="Remove from wishlist" style="font-size: 1.5rem;">
+                                <i class="bi bi-heart-fill text-danger"></i>
+                            </button>
+                        </form>
+
+                        <form th:unless="${inWishlist}" th:action="@{'/wishlist/add/' + ${card.id}}" method="post" class="m-0 p-0">
+                            <button type="submit" class="btn btn-link p-0 border-0" title="Add to wishlist" style="font-size: 1.5rem;">
+                                <i class="bi bi-heart text-muted"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="card-body">
@@ -39,10 +54,13 @@
                                 Adds 3 mana of any single color of your choice to your mana pool, then is discarded. Tapping this artifact can be played as an interrupt.
                             </p>
                         </div>
+                        <div class="mb-3">
+                            <h5 class="card-title">Price:</h5>
+                            <p class="card-text" th:text="${card.price}">10.00</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
->

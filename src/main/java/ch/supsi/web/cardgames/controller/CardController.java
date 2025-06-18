@@ -1,5 +1,7 @@
 package ch.supsi.web.cardgames.controller;
 
+import ch.supsi.web.cardgames.model.WishlistItem;
+import ch.supsi.web.cardgames.service.WishlistService;
 import org.springframework.security.core.userdetails.User;
 import ch.supsi.web.cardgames.service.UserService;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,7 +14,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.List;
 
 @Controller
 @RequestMapping("/card")
@@ -20,10 +21,12 @@ public class CardController {
 
     private final CardService cardService;
     private final UserService userService;
+    private final WishlistService wishlistService;
 
-    public CardController(CardService cardService, UserService userService) {
+    public CardController(CardService cardService, UserService userService, WishlistService wishlistService) {
         this.cardService = cardService;
         this.userService = userService;
+        this.wishlistService = wishlistService;
     }
 
     @GetMapping("/not-found")
@@ -55,10 +58,19 @@ public class CardController {
     @GetMapping("/{cardId}")
     public String cardDetail(@PathVariable int cardId, Model model) {
         Card card = cardService.getCardById(cardId);
-        if(card == null){
+        if (card == null){
             return "redirect:/card/not-found";
         }
         model.addAttribute("card", card);
+
+        boolean inWishlist = false;
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (principal instanceof org.springframework.security.core.userdetails.User user) {
+            ch.supsi.web.cardgames.model.User loggedUser = this.userService.findUserByUsername(user.getUsername());
+            inWishlist = wishlistService.isCardInWishlist(loggedUser, card);
+        }
+
+        model.addAttribute("inWishlist", inWishlist);
         return "details";
     }
 

@@ -12,6 +12,7 @@
                   th:classappend="${'condition-' + #strings.toLowerCase(#strings.replace(card.cardCondition, '_', '-'))}"
                   th:text="${#strings.toLowerCase(#strings.replace(card.cardCondition, '_', '-'))}">
             </span>
+            <span class="badge bg-secondary card-price" th:text="${#numbers.formatDecimal(card.price, 1, 2)} + ' CHF'">Price</span>
         </div>
     </div>
     <div class="card-footer">

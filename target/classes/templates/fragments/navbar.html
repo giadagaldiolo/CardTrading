@@ -11,6 +11,11 @@
                 <li class="nav-item">
                     <a class="nav-link text-black" th:href="@{/card/new}">Card sale form</a>
                 </li>
+                <div sec:authorize="isAuthenticated()">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" th:href="@{/wishlist}">Wishlist</a>
+                    </li>
+                </div>
                 <li class="nav-item d-lg-none">
                     <a class="nav-link text-white" th:href="@{/news}">News</a>
                 </li>

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.math.BigDecimal;
 import java.util.Date;
 @Entity @Getter @Setter @NoArgsConstructor @ToString
 public class Card {
@@ -34,10 +35,13 @@ public class Card {
     @Column(columnDefinition = "LONGBLOB")
     private byte[] image;
 
+    @Column
+    private BigDecimal price;
+
 
     public Card(String author, String cname, String description, Date date,
                 byte[] image, CardCondition cardCondition,
-                CardType cardType, User ownerUser) {
+                CardType cardType, User ownerUser, BigDecimal price) {
         this.author = author;
         this.cname = cname;
         this.description = description;
@@ -46,6 +50,7 @@ public class Card {
         this.cardCondition = cardCondition;
         this.cardType = cardType;
         this.ownerUser = ownerUser;
+        this.price = price;
     }
 
     public String getBase64Image() {

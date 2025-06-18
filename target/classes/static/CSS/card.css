@@ -48,7 +48,7 @@
     text-overflow: ellipsis;
 }
 
-.card-type {
+.card-type .card-price {
     font-size: 12px;
     background-color: #f0f0f0;
     padding: 3px 8px;
@@ -95,6 +95,7 @@
     width: 100%;
     text-align: center;
 }
+
 
 /* Condition Colors */
 .condition-mint {
