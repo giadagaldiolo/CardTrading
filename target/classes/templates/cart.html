@@ -14,5 +14,8 @@
                 <div th:replace="~{fragments/card :: card(${card})}"></div>
             </a>
         </div>
+        <div class="mt-4 text-center">
+            <h4>Total: <span th:text="${#numbers.formatDecimal(totalPrice, 1, 2)} + ' CHF'">Total: 0.00 CHF</span></h4>
+        </div>
     </section>
 </main>

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Controller
@@ -79,8 +80,14 @@ public class MainController {
         org.springframework.security.core.userdetails.User user = (org.springframework.security.core.userdetails.User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         ch.supsi.web.cardgames.model.User loggedUser = userService.findUserByUsername(user.getUsername());
 
-        List<Card> cart = userService.getCart(loggedUser);
-        model.addAttribute("cartCards", cart);
+        List<Card> cards = userService.getCart(loggedUser);
+
+        BigDecimal totalPrice = cards.stream()
+                .map(Card::getPrice)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        model.addAttribute("cartCards", cards);
+        model.addAttribute("totalPrice", totalPrice);
         return "cart";
     }
 }

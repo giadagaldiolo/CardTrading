@@ -64,12 +64,16 @@ public class UserService {
     }
 
     public void addToCart(User user, Card card) {
-        user.getCart().add(card);
+        if (!isCardInCart(user, card)) {
+            user.getCart().add(card);
+        }
         userRepository.save(user);
     }
 
     public void removeFromCart(User user, Card card) {
-        user.getCart().remove(card);
+        if (isCardInCart(user, card)) {
+            user.getCart().remove(card);
+        }
         userRepository.save(user);
     }
 

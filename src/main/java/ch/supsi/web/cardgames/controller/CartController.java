@@ -43,7 +43,7 @@ public class CartController {
         Card card = cardService.getCardById(cardId);
         userService.removeFromCart(loggedUser, card);
 
-        return "redirect:/cart" + cardId;
+        return "redirect:/card/" + cardId;
     }
 
 }
