@@ -7,10 +7,10 @@
     <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/cards.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cards.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/CardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/CardRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +120,7 @@
       <workItem from="1749472523041" duration="6000" />
       <workItem from="1750228758517" duration="2700000" />
       <workItem from="1750254790432" duration="9311000" />
-      <workItem from="1750277757851" duration="1026000" />
+      <workItem from="1750277757851" duration="2329000" />
     </task>
     <servers />
   </component>

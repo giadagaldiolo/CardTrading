@@ -60,5 +60,15 @@ public class CardService {
         return (int) cardRepository.count();
     }
 
-
+    public List<Card> searchCards(String name, CardType type) {
+        if (name != null && !name.isBlank() && type != null) {
+            return cardRepository.findByCnameContainingIgnoreCaseAndCardType(name, type);
+        } else if (name != null && !name.isBlank()) {
+            return cardRepository.findByCnameContainingIgnoreCase(name);
+        } else if (type != null) {
+            return cardRepository.findByCardType(type);
+        } else {
+            return cardRepository.findAll();
+        }
+    }
 }
