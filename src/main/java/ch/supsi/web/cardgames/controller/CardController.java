@@ -109,6 +109,8 @@ public class CardController {
         if(card == null){
             return "redirect:/card/not-found";
         }
+        wishlistService.deleteCardFromAllWishlists(cardId);
+        userService.removeCardFromAllCarts(cardId);
         cardService.deleteCard(card);
         return "redirect:/";
     }

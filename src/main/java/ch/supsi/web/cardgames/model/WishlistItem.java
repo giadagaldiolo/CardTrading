@@ -7,7 +7,7 @@ import lombok.*;
 public class WishlistItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private int id;
 
     @ManyToOne
     private User user;

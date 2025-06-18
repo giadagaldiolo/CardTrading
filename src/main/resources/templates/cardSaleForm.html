@@ -4,7 +4,7 @@
     headerTitle='Sell a Card',
     pageDescription='Form to sell a card in the SUPSI card online shop',
     additionalCss=null,
-    pageScripts=null,
+    pageScripts=~{::scripts},
     pageContent=~{:: content}
 )}">
     <section th:fragment="content" class="container pt-4">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="image" class="form-label">Image:</label>
-                                <input type="file" class="form-control" id="image" name="imageFile" accept="image/*" required>
+                                <input type="file" class="form-control" id="image" name="imageFile" accept="image/*">
                                 <div class="invalid-feedback">Please select an image.</div>
                             </div>
                         </div>
@@ -75,4 +75,8 @@
             </div>
         </div>
     </section>
+
+    <th:block th:fragment="scripts">
+        <script th:src="@{/scripts/cardValidation.js}"></script>
+    </th:block>
 </main>

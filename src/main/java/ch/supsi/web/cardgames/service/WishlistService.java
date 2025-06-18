@@ -38,4 +38,9 @@ public class WishlistService {
     public List<Card> getCardsInWishlistByUser(User loggedUser) {
         return wishlistRepository.findCardsByUser(loggedUser);
     }
+
+    @Transactional
+    public void deleteCardFromAllWishlists(int cardId) {
+        wishlistRepository.deleteByCardId(cardId);
+    }
 }

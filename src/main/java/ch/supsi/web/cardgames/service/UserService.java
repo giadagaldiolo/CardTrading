@@ -4,6 +4,7 @@ package ch.supsi.web.cardgames.service;
 import ch.supsi.web.cardgames.model.Card;
 import ch.supsi.web.cardgames.model.User;
 import ch.supsi.web.cardgames.model.UserRole;
+import ch.supsi.web.cardgames.repository.CardRepository;
 import ch.supsi.web.cardgames.repository.UserRepository;
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +17,14 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final CardRepository cardRepository;
 
     @Autowired
     private PasswordEncoder BCPasswordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, CardRepository cardRepository) {
         this.userRepository = userRepository;
+        this.cardRepository = cardRepository;
     }
 
     public List<User> getAllUsers() {
@@ -85,4 +88,14 @@ public class UserService {
         return user.getCart().contains(card);
     }
 
+    public void removeCardFromAllCarts(int cardId) {
+        List<User> usersWithCardInCart = userRepository.findUsersByCartId(cardId);
+        Card cardToRemove = cardRepository.findById(cardId)
+                .orElseThrow(() -> new RuntimeException("Card not found"));
+
+        for (User user : usersWithCardInCart) {
+            user.getCart().removeIf(card -> card.getId() == cardId);
+            userRepository.save(user);
+        }
+    }
 }
