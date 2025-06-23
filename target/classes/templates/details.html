@@ -17,7 +17,7 @@
                 <div class="d-flex align-items-center gap-2">
                     <div sec:authorize="hasRole('ROLE_ADMIN')">
                         <a class="btn btn-primary me-2" th:href="@{'/card/'+${card.id}+'/edit'}">Edit</a>
-                        <a class="btn btn-danger" th:href="@{'/card/'+${card.id}+'/delete'}">Delete</a>
+                        <a class="btn btn-danger" th:href="@{'/card/'+${card.id}+'/delete'}" onclick="return confirm('Sei sicuro di voler eliminare la carta?');">Delete</a>
                     </div>
                     <div sec:authorize="isAuthenticated()" class="d-flex align-items-center gap-2">
                         <form th:if="${inWishlist}" th:action="@{'/wishlist/delete/' + ${card.id}}" method="post" class="m-0 p-0">

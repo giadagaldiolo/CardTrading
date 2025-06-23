@@ -6,24 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/cards.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cards.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/mobileNews.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/news.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardNotFound.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardNotFound.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mobileNews.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mobileNews.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/mobileNews.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/news.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/scripts/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scripts/validation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mobileNews.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mobileNews.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +117,7 @@
       <workItem from="1750254790432" duration="9311000" />
       <workItem from="1750277757851" duration="5608000" />
       <workItem from="1750446892802" duration="42000" />
-      <workItem from="1750677330663" duration="9999000" />
+      <workItem from="1750677330663" duration="11531000" />
     </task>
     <servers />
   </component>
