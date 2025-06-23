@@ -63,7 +63,7 @@ public class MainController {
 
     @GetMapping("/news")
     public String getMobileNewsPage() {
-        return "mobile-news";
+        return "mobileNews";
     }
 
     @GetMapping("/login")

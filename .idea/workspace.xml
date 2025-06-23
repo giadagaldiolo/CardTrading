@@ -5,27 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ddd899-ae85-4b4a-bc1c-ecf34953c99a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/cardValidation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/cards.lock.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cards.lock.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/cards.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cards.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/WishlistItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/model/WishlistItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/WishlistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/repository/WishlistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/WishlistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/service/WishlistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardEditForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardSaleForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userRegistrationForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/CardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/WishlistItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Model/WishlistItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/WishlistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Service/WishlistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/repository/WishlistRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/repository/WishlistRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cardEditForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cardEditForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cardSaleForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/supsi/web/cardgames/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/mobileNews.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/news.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cardNotFound.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cardNotFound.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mobileNews.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mobileNews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/Controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ch/supsi/web/cardgames/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/mobileNews.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/CSS/news.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scripts/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scripts/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mobileNews.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mobileNews.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
     &quot;Spring Boot.CardgamesApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Documents/Giada/Quarto_semestre/DataPersistence/jpa-tutorial&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/giada/Downloads/jpa-final/jpa-tutorial&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -135,7 +133,9 @@
       <workItem from="1749472523041" duration="6000" />
       <workItem from="1750228758517" duration="2700000" />
       <workItem from="1750254790432" duration="9311000" />
-      <workItem from="1750277757851" duration="4833000" />
+      <workItem from="1750277757851" duration="5608000" />
+      <workItem from="1750446892802" duration="42000" />
+      <workItem from="1750677330663" duration="9999000" />
     </task>
     <servers />
   </component>

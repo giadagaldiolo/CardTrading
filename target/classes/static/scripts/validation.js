@@ -7,8 +7,8 @@ const patterns = {
 
 // Get all form elements
 const form = document.querySelector('form');
-const firstNameInput = document.getElementById('first-name');
-const lastNameInput = document.getElementById('last-name');
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('password-confirm');

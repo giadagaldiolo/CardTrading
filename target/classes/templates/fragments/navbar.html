@@ -11,18 +11,14 @@
                 <li class="nav-item">
                     <a class="nav-link text-black" th:href="@{/card/new}">Card sale form</a>
                 </li>
-                <div sec:authorize="isAuthenticated()">
-                    <li class="nav-item">
-                        <a class="nav-link text-black" th:href="@{/wishlist}">Wishlist</a>
-                    </li>
-                </div>
-                <div sec:authorize="isAuthenticated()">
-                    <li class="nav-item">
-                        <a class="nav-link text-black" th:href="@{/cart}">Cart</a>
-                    </li>
-                </div>
+                <li sec:authorize="isAuthenticated()" class="nav-item">
+                    <a class="nav-link text-black" th:href="@{/wishlist}">Wishlist</a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="nav-item">
+                    <a class="nav-link text-black" th:href="@{/cart}">Cart</a>
+                </li>
                 <li class="nav-item d-lg-none">
-                    <a class="nav-link text-white" th:href="@{/news}">News</a>
+                    <a class="nav-link text-black" th:href="@{/news}">News</a>
                 </li>
             </ul>
         </div>
